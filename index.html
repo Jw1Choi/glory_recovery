@@ -484,13 +484,13 @@
       </div>
 
     </div>
-
+<br>
     <div class="glb-bottom">
 
       <div class="glb-feature">
         <div class="glb-icon">👥</div>
         <div class="glb-feature-text">
-          전국 최대규모<br>
+          전국 최대규모 
           회생파산팀
         </div>
       </div>
@@ -498,7 +498,7 @@
       <div class="glb-feature">
         <div class="glb-icon">✓</div>
         <div class="glb-feature-text">
-          연간 1천건 이상<br>
+          연간 1천건 이상 
           개시결정
         </div>
       </div>
@@ -506,7 +506,7 @@
       <div class="glb-feature">
         <div class="glb-icon">📄</div>
         <div class="glb-feature-text">
-          맞춤형 전략으로<br>
+          맞춤형 전략으로 
           최선의 결과 도출
         </div>
       </div>
@@ -520,7 +520,7 @@
 
   </div>
 </section>
-
+<br>
 <section id="glory-debt-expert-section">
   <style>
     #glory-debt-expert-section{
@@ -2215,9 +2215,7 @@
       box-sizing:border-box;
     }
 
-    #glory-review-rolling *{
-      box-sizing:border-box;
-    }
+    #glory-review-rolling *{box-sizing:border-box;}
 
     #glory-review-rolling .grv-wrap{
       position:relative;
@@ -2257,8 +2255,13 @@
       color:#071832;
     }
 
-    #glory-review-rolling .grv-title span{
-      color:#c59635;
+    #glory-review-rolling .grv-head p{
+      margin:14px 0 0;
+      color:#4a5565;
+      font-size:clamp(15px,3.2vw,19px);
+      line-height:1.7;
+      font-weight:600;
+      letter-spacing:-.045em;
     }
 
     #glory-review-rolling .grv-slider{
@@ -2267,11 +2270,13 @@
       overflow:hidden;
       cursor:grab;
       user-select:none;
+      -webkit-user-select:none;
       touch-action:pan-y;
+      -webkit-overflow-scrolling:touch;
       padding:8px 0 10px;
     }
 
-    #glory-review-rolling .grv-slider:active{
+    #glory-review-rolling .grv-slider.is-dragging{
       cursor:grabbing;
     }
 
@@ -2324,6 +2329,7 @@
       pointer-events:none;
       -webkit-user-drag:none;
       user-select:none;
+      -webkit-user-select:none;
     }
 
     #glory-review-rolling .grv-caption{
@@ -2387,44 +2393,13 @@
       border-radius:50%;
       background:rgba(7,24,50,.22);
       transition:.25s ease;
+      cursor:pointer;
     }
 
     #glory-review-rolling .grv-dot.is-active{
       width:24px;
       border-radius:999px;
       background:#c59635;
-    }
-
-    #glory-review-rolling .grv-cta-wrap{
-      position:relative;
-      z-index:2;
-      margin-top:24px;
-      padding:0 22px;
-      text-align:center;
-      animation:grvFadeUp .9s ease .25s both;
-    }
-
-    #glory-review-rolling .grv-cta{
-      width:100%;
-      max-width:560px;
-      min-height:66px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:18px 22px;
-      border-radius:18px;
-      text-decoration:none;
-      background:linear-gradient(135deg,#061731,#0b2348);
-      color:#fff;
-      font-size:clamp(19px,4vw,26px);
-      font-weight:950;
-      letter-spacing:-.055em;
-      box-shadow:0 18px 38px rgba(5,18,40,.23), inset 0 -3px 0 #d0a858;
-    }
-
-    #glory-review-rolling .grv-cta span{
-      color:#d8ad55;
     }
 
     @keyframes grvFadeUp{
@@ -2467,13 +2442,12 @@
 
   <div class="grv-wrap">
     <div class="grv-head">
-      <h2 class="grv-title">네이버 영수증 후기<br></h2>
+      <h2 class="grv-title">네이버 영수증 후기</h2>
       <p>많은 고객들이 글로리를 통하여 새 삶을 찾았고<br>그 과정에서 편안함을 느꼈습니다.</p>
     </div>
 
     <div class="grv-slider" id="grvSlider">
       <div class="grv-track" id="grvTrack">
-
         <article class="grv-card">
           <div class="grv-img-wrap">
             <img class="grv-img" src="./img/h1.png" alt="네이버 영수증 후기 1">
@@ -2503,7 +2477,6 @@
             <span>네이버 영수증 후기</span>
           </div>
         </article>
-
       </div>
     </div>
 
@@ -2516,8 +2489,6 @@
       </div>
       <button class="grv-btn" type="button" id="grvNext">›</button>
     </div>
-
-  
   </div>
 
   <script>
@@ -2534,10 +2505,11 @@
 
       let index = 0;
       let startX = 0;
-      let currentX = 0;
-      let prevTranslate = 0;
+      let startY = 0;
       let currentTranslate = 0;
+      let prevTranslate = 0;
       let isDragging = false;
+      let isHorizontalDrag = false;
 
       function getStep(){
         if(!cards[0]) return 0;
@@ -2550,43 +2522,105 @@
         return cards.length - 1;
       }
 
-      function setActiveDot(){
-        dots.forEach((dot, i)=>{
+      function setDots(){
+        dots.forEach(function(dot, i){
           dot.classList.toggle('is-active', i === index);
         });
       }
 
-      function moveTo(i, animate){
-        index = Math.max(0, Math.min(i, maxIndex()));
+      function moveTo(nextIndex, animate){
+        index = Math.max(0, Math.min(nextIndex, maxIndex()));
         currentTranslate = -getStep() * index;
         prevTranslate = currentTranslate;
+
         track.style.transition = animate ? 'transform .45s cubic-bezier(.22,.61,.36,1)' : 'none';
         track.style.transform = 'translate3d(' + currentTranslate + 'px,0,0)';
-        setActiveDot();
+        setDots();
       }
 
-      function pointerDown(e){
+      function getPoint(e){
+        if(e.touches && e.touches.length){
+          return {
+            x:e.touches[0].clientX,
+            y:e.touches[0].clientY
+          };
+        }
+
+        if(e.changedTouches && e.changedTouches.length){
+          return {
+            x:e.changedTouches[0].clientX,
+            y:e.changedTouches[0].clientY
+          };
+        }
+
+        return {
+          x:e.clientX,
+          y:e.clientY
+        };
+      }
+
+      function dragStart(e){
+        const point = getPoint(e);
+
         isDragging = true;
-        startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        isHorizontalDrag = false;
+        startX = point.x;
+        startY = point.y;
+        slider.classList.add('is-dragging');
         track.style.transition = 'none';
       }
 
-      function pointerMove(e){
+      function dragMove(e){
         if(!isDragging) return;
-        currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-        const diff = currentX - startX;
-        currentTranslate = prevTranslate + diff;
-        track.style.transform = 'translate3d(' + currentTranslate + 'px,0,0)';
+
+        const point = getPoint(e);
+        const diffX = point.x - startX;
+        const diffY = point.y - startY;
+
+        if(!isHorizontalDrag){
+          if(Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 8){
+            dragEnd();
+            return;
+          }
+
+          if(Math.abs(diffX) > 8){
+            isHorizontalDrag = true;
+          }
+        }
+
+        if(isHorizontalDrag){
+          if(e.cancelable) e.preventDefault();
+
+          currentTranslate = prevTranslate + diffX;
+
+          if(currentTranslate > 0){
+            currentTranslate = diffX * 0.28;
+          }
+
+          const maxTranslate = -getStep() * maxIndex();
+
+          if(currentTranslate < maxTranslate){
+            currentTranslate = maxTranslate + (diffX * 0.28);
+          }
+
+          track.style.transform = 'translate3d(' + currentTranslate + 'px,0,0)';
+        }
       }
 
-      function pointerUp(){
+      function dragEnd(){
         if(!isDragging) return;
+
         isDragging = false;
+        slider.classList.remove('is-dragging');
 
         const movedBy = currentTranslate - prevTranslate;
+        const threshold = Math.min(90, getStep() * 0.22);
 
-        if(movedBy < -50) index += 1;
-        if(movedBy > 50) index -= 1;
+        if(movedBy < -threshold){
+          index += 1;
+        }else if(movedBy > threshold){
+          index -= 1;
+        }
 
         moveTo(index, true);
       }
@@ -2599,20 +2633,20 @@
         moveTo(index + 1, true);
       });
 
-      dots.forEach((dot, i)=>{
+      dots.forEach(function(dot, i){
         dot.addEventListener('click', function(){
           moveTo(i, true);
         });
       });
 
-      slider.addEventListener('mousedown', pointerDown);
-      slider.addEventListener('mousemove', pointerMove);
-      slider.addEventListener('mouseup', pointerUp);
-      slider.addEventListener('mouseleave', pointerUp);
+      slider.addEventListener('touchstart', dragStart, {passive:true});
+      slider.addEventListener('touchmove', dragMove, {passive:false});
+      slider.addEventListener('touchend', dragEnd, {passive:true});
+      slider.addEventListener('touchcancel', dragEnd, {passive:true});
 
-      slider.addEventListener('touchstart', pointerDown, {passive:true});
-      slider.addEventListener('touchmove', pointerMove, {passive:true});
-      slider.addEventListener('touchend', pointerUp);
+      slider.addEventListener('mousedown', dragStart);
+      window.addEventListener('mousemove', dragMove);
+      window.addEventListener('mouseup', dragEnd);
 
       window.addEventListener('resize', function(){
         moveTo(index, false);
