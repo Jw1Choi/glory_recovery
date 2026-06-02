@@ -1,0 +1,3607 @@
+<section id="glory-lawyer-banner">
+  <style>
+    #glory-lawyer-banner{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      font-family:'Pretendard','Noto Sans KR',sans-serif;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 20px 50px rgba(0,0,0,.08);
+      border:1px solid rgba(0,0,0,.08);
+    }
+
+    #glory-lawyer-banner *{
+      box-sizing:border-box;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    #glory-lawyer-banner .glb-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 24px;
+      background:#fff;
+      border-bottom:1px solid rgba(0,0,0,.08);
+      animation:glbFadeDown .8s ease;
+    }
+
+    #glory-lawyer-banner .glb-logo-link{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      flex:1;
+    }
+
+    #glory-lawyer-banner .glb-logo-img{
+      width: 100%;
+      max-width: 170px;
+      height:auto;
+      display:block;
+      object-fit:contain;
+    }
+
+    #glory-lawyer-banner .glb-header-badge{
+      flex-shrink:0;
+      font-size:22px;
+      font-weight:900;
+      color:#071832;
+      letter-spacing:-0.04em;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    #glory-lawyer-banner .glb-main{
+      position:relative;
+      padding:35px 20px 0;
+      text-align:center;
+      overflow:hidden;
+      background:
+      radial-gradient(circle at center,
+      rgba(212,220,230,.8),
+      transparent 55%);
+    }
+
+    #glory-lawyer-banner .glb-proof-line{
+      width:90%;
+      max-width:520px;
+      height:2px;
+      margin:0 auto 22px;
+      background:linear-gradient(
+      90deg,
+      transparent,
+      #071832,
+      transparent);
+    }
+
+    #glory-lawyer-banner .glb-proof-small{
+      display:block;
+      color:#1f2d47;
+      font-size:28px;
+      font-weight:700;
+      line-height:1.3;
+      letter-spacing:-0.05em;
+      animation:glbFadeUp .8s ease;
+    }
+
+    #glory-lawyer-banner .glb-proof-big{
+      display:block;
+      margin-top:8px;
+      color:#071832;
+      font-size:42px;
+      font-weight:900;
+      line-height:1.2;
+      letter-spacing:-0.06em;
+      animation:glbFadeUp .9s ease;
+    }
+
+    /* =========================
+       ROLLING BOX
+    ========================= */
+
+    #glory-lawyer-banner .glb-rolling{
+      margin:30px auto 0;
+      max-width:680px;
+      height:170px;
+      position:relative;
+      overflow:hidden;
+      border-radius:18px;
+      background:
+      linear-gradient(
+      135deg,
+      #061731,
+      #0b2348);
+      color:#fff;
+      box-shadow:
+      0 15px 35px rgba(0,0,0,.2),
+      inset 0 -3px 0 #d8ad55;
+    }
+
+    #glory-lawyer-banner .glb-track{
+      position:absolute;
+      inset:0;
+      display:flex;
+      width:300%;
+      animation:glbRolling 9s infinite;
+    }
+
+    #glory-lawyer-banner .glb-slide{
+      width:33.333%;
+      flex:0 0 33.333%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px 35px;
+      font-size:28px;
+      line-height:1.6;
+      font-weight:800;
+      letter-spacing:-0.05em;
+    }
+
+    #glory-lawyer-banner .glb-slide em{
+      font-style:normal;
+      color:#d8ad55;
+    }
+
+    /* =========================
+       LAWYER
+    ========================= */
+
+    #glory-lawyer-banner .glb-lawyer{
+      margin-top:35px;
+      animation:glbFadeUp 1s ease;
+    }
+
+    #glory-lawyer-banner .glb-job{
+      font-size:22px;
+      color:#222;
+      font-weight:500;
+      letter-spacing:-0.04em;
+    }
+
+    #glory-lawyer-banner .glb-name{
+      margin-top:10px;
+      font-size:70px;
+      font-weight:900;
+      color:#071832;
+      letter-spacing:-0.08em;
+      line-height:1;
+    }
+
+    #glory-lawyer-banner .glb-gold{
+      width:80px;
+      height:4px;
+      background:linear-gradient(90deg,#cfa754,#f2d88b);
+      margin:22px auto;
+    }
+
+    #glory-lawyer-banner .glb-desc{
+      font-size:18px;
+      line-height:1.8;
+      color:#444;
+      letter-spacing:-0.04em;
+    }
+
+    #glory-lawyer-banner .glb-photo-wrap{
+      position:relative;
+      min-height:420px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      margin-top:15px;
+    }
+
+    #glory-lawyer-banner .glb-photo-wrap:before{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:450px;
+      left:50%;
+      bottom:0;
+      transform:translateX(-50%);
+      background:
+      radial-gradient(
+      circle,
+      rgba(255,255,255,.95),
+      rgba(214,223,232,.55),
+      transparent 70%);
+    }
+
+    #glory-lawyer-banner .glb-photo{
+      position:relative;
+      z-index:2;
+      width:min(420px,88vw);
+      display:block;
+      filter:drop-shadow(0 15px 20px rgba(0,0,0,.15));
+    }
+
+    /* =========================
+       FOOTER FEATURES
+    ========================= */
+
+    #glory-lawyer-banner .glb-bottom{
+      background:
+      linear-gradient(
+      135deg,
+      #061731,
+      #0b2348);
+      color:#fff;
+    }
+
+    #glory-lawyer-banner .glb-feature{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:22px 24px;
+      border-bottom:1px solid rgba(255,255,255,.15);
+    }
+
+    #glory-lawyer-banner .glb-icon{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      flex-shrink:0;
+    }
+
+    #glory-lawyer-banner .glb-feature-text{
+      font-size:20px;
+      line-height:1.6;
+      letter-spacing:-0.04em;
+    }
+
+    #glory-lawyer-banner .glb-final{
+      padding:28px;
+      text-align:center;
+    }
+
+    #glory-lawyer-banner .glb-final small{
+      display:block;
+      font-size:20px;
+      opacity:.9;
+      margin-bottom:10px;
+    }
+
+    #glory-lawyer-banner .glb-final strong{
+      display:block;
+      font-size:54px;
+      font-weight:900;
+      letter-spacing:.08em;
+    }
+
+    @keyframes glbRolling{
+      0%,26%{
+        transform:translateX(0);
+      }
+      33%,59%{
+        transform:translateX(-33.333%);
+      }
+      66%,92%{
+        transform:translateX(-66.666%);
+      }
+      100%{
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes glbFadeUp{
+      from{
+        opacity:0;
+        transform:translateY(25px);
+      }
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @keyframes glbFadeDown{
+      from{
+        opacity:0;
+        transform:translateY(-20px);
+      }
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @media(max-width:480px){
+
+      #glory-lawyer-banner .glb-header{
+        padding:14px 16px;
+      }
+
+      #glory-lawyer-banner .glb-logo-img{
+        /* width:150px; */
+      }
+
+      #glory-lawyer-banner .glb-header-badge{
+        font-size:16px;
+      }
+
+      #glory-lawyer-banner .glb-proof-small{
+        font-size:20px;
+      }
+
+      #glory-lawyer-banner .glb-proof-big{
+        font-size:28px;
+      }
+
+      #glory-lawyer-banner .glb-slide{
+        font-size:18px;
+      }
+
+      #glory-lawyer-banner .glb-name{
+        font-size:48px;
+      }
+
+      #glory-lawyer-banner .glb-photo-wrap{
+        min-height:330px;
+      }
+
+      #glory-lawyer-banner .glb-feature-text{
+        font-size:17px;
+      }
+
+      #glory-lawyer-banner .glb-final strong{
+        font-size:42px;
+      }
+    }
+  </style>
+
+  <div class="glb-card">
+
+    <header class="glb-header">
+
+      <a href="#" class="glb-logo-link">
+        <img
+          src="https://glorylawfirm.kr/kor/images/common/logo_on.png"
+          alt="법무법인 글로리"
+          class="glb-logo-img">
+      </a>
+
+      <div class="glb-header-badge">
+        회생파산 전문로펌
+      </div>
+
+    </header>
+
+    <div class="glb-main">
+
+      <div class="glb-proof-line"></div>
+
+      <!-- <span class="glb-proof-small">
+        전국 최대규모 회생파산팀
+      </span>
+
+      <span class="glb-proof-big">
+        연간 1천건 이상의 개시결정
+      </span> -->
+
+      <div class="glb-rolling">
+
+        <div class="glb-track">
+
+          <div class="glb-slide">
+            <div>
+              빚 해결을 위한
+              <em>단 한번의 기회</em><br>
+              그저 그런 곳에 맡기시겠습니까?
+            </div>
+          </div>
+
+          <div class="glb-slide">
+            <div>
+              전국 최대규모 회생파산팀<br>
+              <em> 연간 1천건 이상의 개시결정</em>
+            </div>
+          </div>
+
+          <div class="glb-slide">
+            <div>
+              당신의 상황에 맞는<br>
+              <em>맞춤형 회생 전략</em>으로 함께합니다.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="glb-lawyer">
+
+        <div class="glb-job">
+          대한변호사협회 등록 개인회생 전문 변호사
+        </div>
+
+        <div class="glb-name">
+          이아무 변호사
+        </div>
+
+        <div class="glb-gold"></div>
+
+        <div class="glb-desc">
+          의뢰인의 권리를 최우선으로 생각하며<br>
+          최선의 결과를 위해 끝까지 함께하겠습니다.
+        </div>
+
+      </div>
+
+      <div class="glb-photo-wrap">
+
+        <img
+          src="./img/intro-lawyer.png"
+          alt="이아무 변호사"
+          class="glb-photo">
+
+      </div>
+
+    </div>
+
+    <div class="glb-bottom">
+
+      <div class="glb-feature">
+        <div class="glb-icon">👥</div>
+        <div class="glb-feature-text">
+          전국 최대규모<br>
+          회생파산팀
+        </div>
+      </div>
+
+      <div class="glb-feature">
+        <div class="glb-icon">✓</div>
+        <div class="glb-feature-text">
+          연간 1천건 이상<br>
+          개시결정
+        </div>
+      </div>
+
+      <div class="glb-feature">
+        <div class="glb-icon">📄</div>
+        <div class="glb-feature-text">
+          맞춤형 전략으로<br>
+          최선의 결과 도출
+        </div>
+      </div>
+
+      <!-- <div class="glb-final">
+        <small>개인회생 전문 변호사</small>
+        <strong>이아무</strong>
+      </div> -->
+
+    </div>
+
+  </div>
+</section>
+
+<section id="glory-debt-expert-section">
+  <style>
+    #glory-debt-expert-section{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;
+      background:#fff;
+      color:#071832;
+      overflow:hidden;
+    }
+
+    #glory-debt-expert-section *{
+      box-sizing:border-box;
+    }
+
+    #glory-debt-expert-section .gdes-wrap{
+      padding:12px;
+      background:linear-gradient(180deg,#fff 0%,#f7f9fc 55%,#fff 100%);
+    }
+
+    #glory-debt-expert-section .gdes-row{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      grid-template-areas:
+        "question question"
+        "profile info";
+      gap:16px 26px;
+      align-items:center;
+      padding:38px 18px 52px;
+      border-bottom:1px solid rgba(7,24,50,.08);
+      background:#fff;
+    }
+
+    #glory-debt-expert-section .gdes-row.reverse{
+      grid-template-columns:1fr 220px;
+      grid-template-areas:
+        "question question"
+        "info profile";
+    }
+
+    #glory-debt-expert-section .gdes-q-bubble{
+      grid-area:question;
+      position:relative;
+      width:100%;
+      padding:22px 30px 24px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#061731,#082b66);
+      color:#fff;
+      box-shadow:0 8px 18px rgba(7,24,50,.22), inset 0 -3px 0 rgba(216,173,85,.7);
+    }
+
+    #glory-debt-expert-section .gdes-row.reverse .gdes-q-bubble:before{
+      content:'';
+      position:absolute;
+      left:-22px;
+      top:50%;
+      transform:translateY(-50%);
+      width:0;
+      height:0;
+      border-top:14px solid transparent;
+      border-bottom:14px solid transparent;
+      border-right:24px solid #061b42;
+      filter:drop-shadow(-2px 3px 2px rgba(0,0,0,.18));
+    }
+
+    #glory-debt-expert-section .gdes-row:not(.reverse) .gdes-q-bubble:before{
+      content:'';
+      position:absolute;
+      right:-22px;
+      top:50%;
+      transform:translateY(-50%);
+      width:0;
+      height:0;
+      border-top:14px solid transparent;
+      border-bottom:14px solid transparent;
+      border-left:24px solid #061b42;
+      filter:drop-shadow(2px 3px 2px rgba(0,0,0,.18));
+    }
+
+    #glory-debt-expert-section .gdes-question{
+      margin:0;
+      font-size:clamp(30px,5vw,40px);
+      line-height:1.26;
+      font-weight:950;
+      letter-spacing:-.075em;
+      color:#fff;
+    }
+
+    #glory-debt-expert-section .gdes-question strong{
+      color:#ffda35;
+      font-weight:950;
+    }
+
+    #glory-debt-expert-section .gdes-profile{
+      grid-area:profile;
+      position:relative;
+      height:190px;
+      border-radius:14px;
+      overflow:visible;
+      background:#eef1f6;
+    }
+
+    #glory-debt-expert-section .gdes-photo-wrap{
+      height:135px;
+      border-radius:14px;
+      overflow:hidden;
+      background:#eef1f6;
+      box-shadow:0 8px 16px rgba(7,24,50,.08);
+    }
+
+    #glory-debt-expert-section .gdes-photo{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:contain;
+      object-position:center top;
+    }
+
+    @media screen and (max-width:560px) {
+      
+    #glory-debt-expert-section .gdes-photo{
+ 
+      object-fit:cover;
+    }
+
+
+    }
+
+    #glory-debt-expert-section .gdes-name-box{
+      margin-top:8px;
+      padding:9px 8px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#061731,#082b66);
+      color:#fff;
+      text-align:center;
+      box-shadow:0 8px 18px rgba(0,0,0,.16);
+    }
+
+    #glory-debt-expert-section .gdes-name{
+      display:block;
+      font-size:16px;
+      line-height:1.25;
+      font-weight:950;
+      letter-spacing:-.055em;
+    }
+
+    #glory-debt-expert-section .gdes-name em{
+      font-style:normal;
+      color:#ffd33d;
+      font-size:22px;
+    }
+
+    #glory-debt-expert-section .gdes-career{
+      display:block;
+      margin-top:5px;
+      font-size:13px;
+      font-weight:750;
+      letter-spacing:-.045em;
+    }
+
+    #glory-debt-expert-section .gdes-info{
+      grid-area:info;
+      min-width:0;
+    }
+
+    #glory-debt-expert-section .gdes-a-bubble{
+      position:relative;
+      display:flex;
+      align-items:center;
+      width:100%;
+      min-height:96px;
+      padding:20px 24px;
+      border:2px solid #c47c10;
+      border-radius:18px;
+      background:#fff;
+      color:#071832;
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    #glory-debt-expert-section .gdes-a-bubble:before{
+      content:'';
+      position:absolute;
+      left:-17px;
+      top:50%;
+      transform:translateY(-50%);
+      width:0;
+      height:0;
+      border-top:12px solid transparent;
+      border-bottom:12px solid transparent;
+      border-right:17px solid #c47c10;
+    }
+
+    #glory-debt-expert-section .gdes-a-bubble:after{
+      content:'';
+      position:absolute;
+      left:-13px;
+      top:50%;
+      transform:translateY(-50%);
+      width:0;
+      height:0;
+      border-top:10px solid transparent;
+      border-bottom:10px solid transparent;
+      border-right:15px solid #fff;
+    }
+
+    #glory-debt-expert-section .gdes-row.reverse .gdes-a-bubble:before{
+      left:auto;
+      right:-17px;
+      border-right:0;
+      border-left:17px solid #c47c10;
+    }
+
+    #glory-debt-expert-section .gdes-row.reverse .gdes-a-bubble:after{
+      left:auto;
+      right:-13px;
+      border-right:0;
+      border-left:15px solid #fff;
+    }
+
+    #glory-debt-expert-section .gdes-answer{
+      margin:0;
+      font-size:clamp(20px,3.5vw,26px);
+      line-height:1.6;
+      font-weight:900;
+      letter-spacing:-.055em;
+      color:#0f172a;
+    }
+
+    #glory-debt-expert-section .gdes-answer strong{
+      color:#9c5f00;
+      font-weight:950;
+    }
+
+    #glory-debt-expert-section .gdes-badge{
+      margin-top:12px;
+      display:flex;
+      align-items:center;
+      width:100%;
+      max-width:100%;
+    }
+
+    #glory-debt-expert-section .gdes-badge-text{
+      width:100%;
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:9px 18px;
+      border:2px solid #c47c10;
+      border-radius:999px;
+      color:#a35f05;
+      background:#fff;
+      font-size:clamp(20px,3.4vw,27px);
+      font-weight:950;
+      letter-spacing:-.06em;
+      text-align:center;
+      box-shadow:0 6px 14px rgba(0,0,0,.05);
+    }
+
+    @media(max-width:560px){
+      #glory-debt-expert-section .gdes-wrap{
+        padding:8px;
+      }
+
+      #glory-debt-expert-section .gdes-row,
+      #glory-debt-expert-section .gdes-row.reverse{
+        grid-template-columns:110px 1fr;
+        grid-template-areas:
+          "question question"
+          "profile info";
+        gap:10px 10px;
+        padding:12px 8px 15px;
+      }
+
+      #glory-debt-expert-section .gdes-row.reverse{
+        grid-template-columns:1fr 110px;
+        grid-template-areas:
+          "question question"
+          "info profile";
+      }
+
+      #glory-debt-expert-section .gdes-q-bubble{
+        padding:15px 16px 16px;
+        border-radius:15px;
+      }
+
+      #glory-debt-expert-section .gdes-row.reverse .gdes-q-bubble:before{
+        left:18px;
+        top:auto;
+        bottom:-10px;
+        transform:none;
+        border-left:9px solid transparent;
+        border-right:9px solid transparent;
+        border-top:12px solid #061b42;
+        border-bottom:0;
+      }
+
+      #glory-debt-expert-section .gdes-row:not(.reverse) .gdes-q-bubble:before{
+        right:18px;
+        top:auto;
+        bottom:-10px;
+        transform:none;
+        border-left:9px solid transparent;
+        border-right:9px solid transparent;
+        border-top:12px solid #061b42;
+        border-bottom:0;
+      }
+
+      #glory-debt-expert-section .gdes-question{
+        font-size:21px;
+        line-height:1.32;
+      }
+
+      #glory-debt-expert-section .gdes-profile{
+        height:auto;
+      }
+
+      #glory-debt-expert-section .gdes-photo-wrap{
+        height:118px;
+        border-radius:10px;
+      }
+
+      #glory-debt-expert-section .gdes-name-box{
+        margin-top:6px;
+        padding:7px 4px;
+      }
+
+      #glory-debt-expert-section .gdes-name{
+        font-size:12px;
+      }
+
+      #glory-debt-expert-section .gdes-name em{
+        font-size:17px;
+      }
+
+      #glory-debt-expert-section .gdes-career{
+        font-size:9px;
+      }
+
+      #glory-debt-expert-section .gdes-a-bubble{
+        min-height:88px;
+        padding:13px 14px;
+        border-radius:12px;
+        border-width:1.5px;
+      }
+
+      #glory-debt-expert-section .gdes-a-bubble:before{
+        left:-12px;
+        border-top:8px solid transparent;
+        border-bottom:8px solid transparent;
+        border-right:12px solid #c47c10;
+      }
+
+      #glory-debt-expert-section .gdes-a-bubble:after{
+        left:-9px;
+        border-top:7px solid transparent;
+        border-bottom:7px solid transparent;
+        border-right:10px solid #fff;
+      }
+
+      #glory-debt-expert-section .gdes-row.reverse .gdes-a-bubble:before{
+        left:auto;
+        right:-12px;
+        border-right:0;
+        border-left:12px solid #c47c10;
+      }
+
+      #glory-debt-expert-section .gdes-row.reverse .gdes-a-bubble:after{
+        left:auto;
+        right:-9px;
+        border-right:0;
+        border-left:10px solid #fff;
+      }
+
+      #glory-debt-expert-section .gdes-answer{
+        font-size:15px;
+        line-height:1.55;
+      }
+
+      #glory-debt-expert-section .gdes-badge{
+        margin-top:8px;
+      }
+
+      #glory-debt-expert-section .gdes-badge-text{
+        min-height:32px;
+        padding:6px 9px;
+        font-size:14px;
+        border-width:1.5px;
+      }
+    }
+
+    @media(max-width:390px){
+      #glory-debt-expert-section .gdes-row,
+      #glory-debt-expert-section .gdes-row.reverse{
+        grid-template-columns:98px 1fr;
+      }
+
+      #glory-debt-expert-section .gdes-row.reverse{
+        grid-template-columns:1fr 98px;
+      }
+
+      #glory-debt-expert-section .gdes-photo-wrap{
+        height:108px;
+      }
+
+      #glory-debt-expert-section .gdes-question{
+        font-size:19px;
+      }
+
+      #glory-debt-expert-section .gdes-answer{
+        font-size:15px;
+      }
+
+      #glory-debt-expert-section .gdes-badge-text{
+        font-size:13px;
+      }
+    }
+  </style>
+
+  <div class="gdes-wrap">
+
+    <div class="gdes-row reverse">
+      <div class="gdes-q-bubble">
+        <h3 class="gdes-question">개인회생상담?<br><strong>된다 안된다가 끝이 아닙니다</strong></h3>
+      </div>
+
+      <div class="gdes-profile">
+        <div class="gdes-photo-wrap">
+          <img class="gdes-photo" src="./img/member_01.png" alt="김참순 국장">
+        </div>
+        <div class="gdes-name-box">
+          <span class="gdes-name">회생1팀<br><em>김참순</em> 국장</span>
+          <span class="gdes-career">💼 회생파산 20년경력</span>
+        </div>
+      </div>
+
+      <div class="gdes-info">
+        <div class="gdes-a-bubble">
+          <p class="gdes-answer">신청했다고 끝이 아닌,<br><strong>최저 변제금을 위한 컨설팅과 노력!</strong></p>
+        </div>
+        <div class="gdes-badge">
+          <div class="gdes-badge-text">최저 변제금 전략 컨설팅</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gdes-row">
+      <div class="gdes-q-bubble">
+        <h3 class="gdes-question">다들 전문이라는데,<br><strong>개인회생전문이 맞아요?</strong></h3>
+      </div>
+
+      <div class="gdes-profile">
+        <div class="gdes-photo-wrap">
+          <img class="gdes-photo" src="./img/member_02.png" alt="김도헌 국장">
+        </div>
+        <div class="gdes-name-box">
+          <span class="gdes-name">회생2팀<br><em>김도헌</em> 국장</span>
+          <span class="gdes-career">🎓 법학전문대학원석사</span>
+        </div>
+      </div>
+
+      <div class="gdes-info">
+        <div class="gdes-a-bubble">
+          <p class="gdes-answer">진짜는 따로 있습니다. 전국최대규모!<br><strong>회생파산팀만 7개, 연 1천건 이상 처리합니다.</strong></p>
+        </div>
+        <div class="gdes-badge">
+          <div class="gdes-badge-text">전국 최대규모 회생파산팀</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gdes-row reverse">
+      <div class="gdes-q-bubble">
+        <h3 class="gdes-question">선임 때는 다 해준다더니,<br><strong>바쁘면 이것저것 해오라고?</strong></h3>
+      </div>
+
+      <div class="gdes-profile">
+        <div class="gdes-photo-wrap">
+          <img class="gdes-photo" src="./img/member_04.png" alt="박희석 국장">
+        </div>
+        <div class="gdes-name-box">
+          <span class="gdes-name">부채팀<br><em>박희석</em> 국장</span>
+          <span class="gdes-career">🏢 전 발급대행사 대표</span>
+        </div>
+      </div>
+
+      <div class="gdes-info">
+        <div class="gdes-a-bubble">
+          <p class="gdes-answer">글로리 자체 부채발급팀 보유!<br><strong>인가까지 고객에게 업무부과 X</strong></p>
+        </div>
+        <div class="gdes-badge">
+          <div class="gdes-badge-text">자체 부채발급팀 보유</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gdes-row">
+      <div class="gdes-q-bubble">
+        <h3 class="gdes-question">집, 차를 지키면서<br><strong>할 수 있나요?</strong></h3>
+      </div>
+
+      <div class="gdes-profile">
+        <div class="gdes-photo-wrap">
+          <img class="gdes-photo" src="./img/member_03.png" alt="심진영 팀장">
+        </div>
+        <div class="gdes-name-box">
+          <span class="gdes-name">회생4팀<br><em>심진영</em> 팀장</span>
+          <span class="gdes-career">🛡 국가공인신용관리사</span>
+        </div>
+      </div>
+
+      <div class="gdes-info">
+        <div class="gdes-a-bubble">
+          <p class="gdes-answer">예 가능합니다!<br><strong>고객이 원하는 방향으로 진행합니다.</strong></p>
+        </div>
+        <div class="gdes-badge">
+          <div class="gdes-badge-text">자산 보호 방향 상담</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="glory-success-rolling">
+  <style>
+    #glory-success-rolling{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;
+      overflow:hidden;
+      background:#ffffff;
+      color:#071832;
+      border:1px solid rgba(7,24,50,.1);
+      box-shadow:0 20px 50px rgba(7,24,50,.08);
+      box-sizing:border-box;
+    }
+
+    #glory-success-rolling *{box-sizing:border-box;}
+
+    #glory-success-rolling .gsr-wrap{
+      position:relative;
+      overflow:hidden;
+      padding:34px 22px 38px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,249,251,.97),rgba(255,255,255,.98));
+    }
+
+    #glory-success-rolling .gsr-head{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      margin-bottom:26px;
+    }
+
+    #glory-success-rolling .gsr-title{
+      margin:0;
+      font-size:clamp(31px,7.2vw,56px);
+      line-height:1.14;
+      letter-spacing:-.075em;
+      font-weight:950;
+      color:#071832;
+    }
+
+    #glory-success-rolling .gsr-title span{color:#c59635;}
+
+    #glory-success-rolling .gsr-viewport{
+      position:relative;
+      z-index:2;
+      width:100%;
+      overflow:hidden;
+      border-radius:24px;
+      background:linear-gradient(135deg,#061731,#0b2348);
+      box-shadow:0 20px 48px rgba(5,18,40,.22), inset 0 -4px 0 #d0a858;
+    }
+
+    #glory-success-rolling .gsr-track{
+      display:flex;
+      width:300%;
+      transition:transform .85s cubic-bezier(.77,0,.18,1);
+      cursor:grab;
+      user-select:none;
+      -webkit-user-select:none;
+    }
+
+    #glory-success-rolling .gsr-track.is-dragging{
+      cursor:grabbing;
+      transition:none;
+    }
+
+    #glory-success-rolling .gsr-slide{
+      width:33.3333%;
+      flex:0 0 33.3333%;
+      min-height:500px;
+      padding:34px 26px 44px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      touch-action:pan-y;
+    }
+
+    #glory-success-rolling .gsr-case-num{
+      position:relative;
+      z-index:2;
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.24);
+      color:#d8ad55;
+      font-size:19px;
+      font-weight:950;
+      margin-bottom:18px;
+    }
+
+    #glory-success-rolling .gsr-case-title{
+      position:relative;
+      z-index:2;
+      margin:0;
+      font-size:clamp(24px,5vw,38px);
+      line-height:1.28;
+      letter-spacing:-.07em;
+      font-weight:950;
+      color:#ffffff;
+    }
+
+    #glory-success-rolling .gsr-case-title span{color:#d8ad55;}
+
+    #glory-success-rolling .gsr-divider{
+      position:relative;
+      z-index:2;
+      width:72px;
+      height:4px;
+      margin:22px auto 20px;
+      background:linear-gradient(90deg,#cfa754,#f2d88b);
+      border-radius:999px;
+    }
+
+    #glory-success-rolling .gsr-info{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      width:100%;
+      max-width:570px;
+      margin:0 auto;
+    }
+
+    #glory-success-rolling .gsr-info-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:13px 16px;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      text-align:left;
+    }
+
+    #glory-success-rolling .gsr-condition{
+      background:linear-gradient(135deg,rgba(216,173,85,.18),rgba(255,255,255,.1));
+      border:1px solid rgba(216,173,85,.46);
+    }
+
+    #glory-success-rolling .gsr-condition .gsr-info-label{
+      color:#f2d88b;
+      font-weight:950;
+    }
+
+    #glory-success-rolling .gsr-condition .gsr-info-value{
+      color:#fff7dc;
+      font-weight:950;
+    }
+
+    #glory-success-rolling .gsr-point{
+      padding:16px 17px;
+      background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(240,244,248,.94));
+      border:1px solid rgba(216,173,85,.65);
+      box-shadow:0 12px 28px rgba(0,0,0,.16);
+    }
+
+    #glory-success-rolling .gsr-point .gsr-info-label{
+      color:#071832;
+      background:linear-gradient(135deg,#c59635,#f2d88b);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:950;
+    }
+
+    #glory-success-rolling .gsr-point .gsr-info-value{
+      color:#071832;
+      font-size:clamp(18px,3.7vw,24px);
+      font-weight:950;
+    }
+
+    #glory-success-rolling .gsr-info-label{
+      flex:0 0 auto;
+      color:rgba(255,255,255,.68);
+      font-size:15px;
+      font-weight:800;
+      letter-spacing:-.045em;
+    }
+
+    #glory-success-rolling .gsr-info-value{
+      color:#ffffff;
+      font-size:clamp(15px,3.4vw,21px);
+      font-weight:800;
+      line-height:1.45;
+      letter-spacing:-.055em;
+      text-align:right;
+    }
+
+    #glory-success-rolling .gsr-result{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:570px;
+      margin:16px auto 0;
+      padding:20px 18px 22px;
+      border-radius:18px;
+      background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(240,244,248,.96));
+      color:#071832;
+      box-shadow:0 16px 34px rgba(0,0,0,.16);
+      border:1px solid rgba(216,173,85,.55);
+    }
+
+    #glory-success-rolling .gsr-result-label{
+      display:block;
+      margin-bottom:8px;
+      color:#465569;
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:-.05em;
+    }
+
+    #glory-success-rolling .gsr-result strong{
+      display:block;
+      color:#071832;
+      font-size:clamp(31px,8vw,58px);
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.075em;
+    }
+
+    #glory-success-rolling .gsr-result em{
+      font-style:normal;
+      color:#c59635;
+    }
+
+    #glory-success-rolling .countup{
+      display:inline-block;
+      font-variant-numeric:tabular-nums;
+    }
+
+    #glory-success-rolling .countup.pop{
+      animation:gsrPop .45s ease both;
+    }
+
+    #glory-success-rolling .gsr-dots{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:17px;
+      z-index:5;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      pointer-events:none;
+    }
+
+    #glory-success-rolling .gsr-dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:rgba(255,255,255,.34);
+      transition:.3s ease;
+    }
+
+    #glory-success-rolling .gsr-dot.active{
+      background:#ffffff;
+      transform:scale(1.2);
+    }
+
+    @keyframes gsrPop{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.1);}
+      100%{transform:scale(1);}
+    }
+
+    @media(max-width:560px){
+      #glory-success-rolling .gsr-wrap{
+        padding:28px 14px 30px;
+      }
+
+      #glory-success-rolling .gsr-viewport{
+        border-radius:20px;
+      }
+
+      #glory-success-rolling .gsr-slide{
+        min-height:520px;
+        padding:30px 18px 42px;
+      }
+
+      #glory-success-rolling .gsr-info-row{
+        padding:12px 13px;
+      }
+    }
+
+    @media(max-width:390px){
+      #glory-success-rolling .gsr-info-row,
+      #glory-success-rolling .gsr-point{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      #glory-success-rolling .gsr-info-value{
+        text-align:left;
+      }
+    }
+  </style>
+
+  <div class="gsr-wrap">
+    <div class="gsr-head">
+      <h2 class="gsr-title">법무법인 글로리<br><span>실제 탕감 사례</span></h2>
+    </div>
+
+    <div class="gsr-viewport">
+      <div class="gsr-track">
+
+        <article class="gsr-slide">
+          <div class="gsr-case-num">1</div>
+          <h3 class="gsr-case-title">압류독촉금지, 전세사기<br><span>일정한 소득만 있다면</span></h3>
+          <div class="gsr-divider"></div>
+
+          <div class="gsr-info">
+            <div class="gsr-info-row">
+              <span class="gsr-info-label">상황</span>
+              <span class="gsr-info-value">일정한 소득이 있던 공무원 50대</span>
+            </div>
+
+            <div class="gsr-info-row gsr-condition">
+              <span class="gsr-info-label">핵심 조건</span>
+              <span class="gsr-info-value">배우자 질병 치료 · 소명으로 부양가족 인정</span>
+            </div>
+
+            <div class="gsr-info-row gsr-point">
+              <span class="gsr-info-label">최종 결과</span>
+              <span class="gsr-info-value">탕감률 <span class="countup" data-target="91.2" data-decimal="1">0</span>%</span>
+            </div>
+          </div>
+
+          <div class="gsr-result">
+            <span class="gsr-result-label">최종 탕감 금액</span>
+            <strong><em><span class="countup" data-target="6000" data-money="true">0</span>만원</em> 탕감</strong>
+          </div>
+        </article>
+
+        <article class="gsr-slide">
+          <div class="gsr-case-num">2</div>
+          <h3 class="gsr-case-title">분양권채무, 주식코인, 대출<br><span>전국 어디든지</span></h3>
+          <div class="gsr-divider"></div>
+
+          <div class="gsr-info">
+            <div class="gsr-info-row">
+              <span class="gsr-info-label">상황</span>
+              <span class="gsr-info-value">직장인 30대 전세사기</span>
+            </div>
+
+            <div class="gsr-info-row gsr-condition">
+              <span class="gsr-info-label">핵심 조건</span>
+              <span class="gsr-info-value">전세사기 지침 20%보다 낮은 변제율로 개시</span>
+            </div>
+
+            <div class="gsr-info-row gsr-point">
+              <span class="gsr-info-label">최종 결과</span>
+              <span class="gsr-info-value">변제율 <span class="countup" data-target="14.5" data-decimal="1">0</span>% · <span class="countup" data-target="24">0</span>개월</span>
+            </div>
+          </div>
+
+          <div class="gsr-result">
+            <span class="gsr-result-label">최종 탕감 금액</span>
+            <strong><em><span class="countup" data-target="12000" data-money="true">0</span>만원</em> 탕감</strong>
+          </div>
+        </article>
+
+        <article class="gsr-slide">
+          <div class="gsr-case-num">3</div>
+          <h3 class="gsr-case-title">카드빚 · 대부업체<br><span>개인채무 조정</span></h3>
+          <div class="gsr-divider"></div>
+
+          <div class="gsr-info">
+            <div class="gsr-info-row">
+              <span class="gsr-info-label">상황</span>
+              <span class="gsr-info-value">자영업자 40대, 사업실패와 주식 손실</span>
+            </div>
+
+            <div class="gsr-info-row gsr-condition">
+              <span class="gsr-info-label">핵심 조건</span>
+              <span class="gsr-info-value">투자손실금 상세 소명으로 높은 탕감률 인정</span>
+            </div>
+
+            <div class="gsr-info-row gsr-point">
+              <span class="gsr-info-label">최종 결과</span>
+              <span class="gsr-info-value">탕감률 <span class="countup" data-target="92">0</span>%</span>
+            </div>
+          </div>
+
+          <div class="gsr-result">
+            <span class="gsr-result-label">최종 탕감 금액</span>
+            <strong><em><span class="countup" data-target="73000" data-money="true">0</span>만원</em> 탕감</strong>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gsr-dots">
+        <span class="gsr-dot active"></span>
+        <span class="gsr-dot"></span>
+        <span class="gsr-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const section = document.querySelector('#glory-success-rolling');
+      if(!section) return;
+
+      const viewport = section.querySelector('.gsr-viewport');
+      const track = section.querySelector('.gsr-track');
+      const slides = section.querySelectorAll('.gsr-slide');
+      const dots = section.querySelectorAll('.gsr-dot');
+
+      let currentIndex = 0;
+      let timer = null;
+      let isVisible = false;
+
+      let startX = 0;
+      let currentX = 0;
+      let diffX = 0;
+      let isDragging = false;
+
+      function easeOut(t){
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function formatMoney(num){
+        num = Math.floor(num);
+
+        if(num >= 10000){
+          const eok = Math.floor(num / 10000);
+          const man = num % 10000;
+
+          if(man === 0){
+            return eok + '억';
+          }
+
+          return eok + '억' + man.toLocaleString();
+        }
+
+        return num.toLocaleString();
+      }
+
+      function animateNumber(el){
+        const target = parseFloat(el.dataset.target);
+        const decimal = parseInt(el.dataset.decimal || '0', 10);
+        const isMoney = el.dataset.money === 'true';
+
+        if(isNaN(target)) return;
+
+        el.textContent = '0';
+        el.classList.remove('pop');
+        void el.offsetWidth;
+        el.classList.add('pop');
+
+        const duration = 1500;
+        const start = performance.now();
+
+        function frame(now){
+          const progress = Math.min((now - start) / duration, 1);
+          const value = target * easeOut(progress);
+
+          if(isMoney){
+            el.textContent = formatMoney(value);
+          }else{
+            el.textContent = decimal > 0
+              ? value.toFixed(decimal)
+              : Math.floor(value).toLocaleString();
+          }
+
+          if(progress < 1){
+            requestAnimationFrame(frame);
+          }else{
+            el.textContent = isMoney
+              ? formatMoney(target)
+              : decimal > 0
+                ? target.toFixed(decimal)
+                : Math.floor(target).toLocaleString();
+          }
+        }
+
+        requestAnimationFrame(frame);
+      }
+
+      function playSlideNumbers(index){
+        const slide = slides[index];
+        if(!slide) return;
+
+        slide.querySelectorAll('.countup').forEach(function(el){
+          animateNumber(el);
+        });
+      }
+
+      function updateDots(index){
+        dots.forEach(function(dot, i){
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      function setTrackPosition(index, dragPercent){
+        const base = index * 33.3333;
+        const drag = dragPercent || 0;
+        track.style.transform = 'translateX(calc(-' + base + '% + ' + drag + 'px))';
+      }
+
+      function goToSlide(index){
+        currentIndex = index;
+        track.classList.remove('is-dragging');
+        setTrackPosition(currentIndex, 0);
+        updateDots(currentIndex);
+
+        setTimeout(function(){
+          playSlideNumbers(currentIndex);
+        }, 450);
+      }
+
+      function nextSlide(){
+        goToSlide((currentIndex + 1) % slides.length);
+      }
+
+      function prevSlide(){
+        goToSlide(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
+      }
+
+      function stopAutoRolling(){
+        if(timer){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function restartAutoRolling(){
+        stopAutoRolling();
+
+        timer = setInterval(function(){
+          if(!isVisible || isDragging) return;
+          nextSlide();
+        }, 4000);
+      }
+
+      function startRolling(){
+        stopAutoRolling();
+        goToSlide(currentIndex);
+        restartAutoRolling();
+      }
+
+      function dragStart(x){
+        stopAutoRolling();
+        startX = x;
+        currentX = x;
+        diffX = 0;
+        isDragging = true;
+        track.classList.add('is-dragging');
+      }
+
+      function dragMove(x){
+        if(!isDragging) return;
+
+        currentX = x;
+        diffX = currentX - startX;
+
+        const maxDrag = viewport.offsetWidth * 0.32;
+        const limitedDiff = Math.max(Math.min(diffX, maxDrag), -maxDrag);
+
+        setTrackPosition(currentIndex, limitedDiff);
+      }
+
+      function dragEnd(){
+        if(!isDragging) return;
+
+        const threshold = viewport.offsetWidth * 0.16;
+
+        track.classList.remove('is-dragging');
+
+        if(Math.abs(diffX) > threshold){
+          if(diffX < 0){
+            nextSlide();
+          }else{
+            prevSlide();
+          }
+        }else{
+          goToSlide(currentIndex);
+        }
+
+        isDragging = false;
+        diffX = 0;
+        restartAutoRolling();
+      }
+
+      viewport.addEventListener('touchstart', function(e){
+        dragStart(e.touches[0].clientX);
+      }, {passive:true});
+
+      viewport.addEventListener('touchmove', function(e){
+        dragMove(e.touches[0].clientX);
+      }, {passive:true});
+
+      viewport.addEventListener('touchend', function(){
+        dragEnd();
+      });
+
+      viewport.addEventListener('mousedown', function(e){
+        e.preventDefault();
+        dragStart(e.clientX);
+      });
+
+      window.addEventListener('mousemove', function(e){
+        dragMove(e.clientX);
+      });
+
+      window.addEventListener('mouseup', function(){
+        dragEnd();
+      });
+
+      viewport.addEventListener('mouseleave', function(){
+        if(isDragging) dragEnd();
+      });
+
+      dots.forEach(function(dot, index){
+        dot.addEventListener('click', function(){
+          goToSlide(index);
+          restartAutoRolling();
+        });
+      });
+
+      const observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          isVisible = entry.isIntersecting;
+
+          if(isVisible){
+            startRolling();
+          }else{
+            stopAutoRolling();
+          }
+        });
+      }, {
+        threshold:0.35
+      });
+
+      observer.observe(section);
+    })();
+  </script>
+</section>
+
+<section id="glory-result-lawyer">
+  <style>
+    #glory-result-lawyer{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      overflow:hidden;
+      font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;
+      background:#fff;
+      color:#000;
+      box-sizing:border-box;
+    }
+
+    #glory-result-lawyer *{box-sizing:border-box;}
+
+    #glory-result-lawyer .grl-top{
+      position:relative;
+      padding:58px 30px 50px;
+      text-align:center;
+      background:
+        linear-gradient(rgba(255,255,255,.84),rgba(255,255,255,.94)),
+        url('./img/law-office-bg.jpg') center/cover no-repeat;
+      overflow:hidden;
+      animation:grlFadeUp .9s ease both;
+    }
+
+    #glory-result-lawyer .grl-top:before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.92),rgba(255,255,255,.68),rgba(255,255,255,.95)),
+        repeating-linear-gradient(90deg,rgba(7,24,50,.025) 0 1px,transparent 1px 90px);
+      pointer-events:none;
+    }
+
+    #glory-result-lawyer .grl-script{
+      position:relative;
+      z-index:2;
+      display:inline-block;
+      margin-bottom:26px;
+      padding:0 20px;
+      color:#4d345f;
+      font-size:38px;
+      line-height:1.18;
+      font-weight:500;
+      letter-spacing:-.06em;
+      font-family:'Nanum Pen Script','Comic Sans MS',cursive;
+      transform:rotate(-2deg);
+    }
+
+    #glory-result-lawyer .grl-script:after{
+      content:'';
+      position:absolute;
+      left:8px;
+      right:8px;
+      bottom:2px;
+      height:22px;
+      background:rgba(97,72,126,.18);
+      z-index:-1;
+      transform:skewX(-12deg);
+    }
+
+    #glory-result-lawyer .grl-title{
+      position:relative;
+      z-index:2;
+      margin:0;
+      color:#000;
+      font-size:clamp(40px,6.2vw,64px);
+      line-height:1.08;
+      font-weight:950;
+      letter-spacing:-.08em;
+    }
+
+    #glory-result-lawyer .grl-desc-box{
+      position:relative;
+      z-index:2;
+      max-width:620px;
+      margin:44px auto 0;
+      padding:0 42px;
+    }
+
+    #glory-result-lawyer .grl-desc-box:before,
+    #glory-result-lawyer .grl-desc-box:after{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(7,24,50,.12);
+      font-size:130px;
+      line-height:1;
+      font-weight:900;
+    }
+
+    #glory-result-lawyer .grl-desc-box:before{
+      content:'[';
+      left:-8px;
+    }
+
+    #glory-result-lawyer .grl-desc-box:after{
+      content:']';
+      right:-8px;
+    }
+
+    #glory-result-lawyer .grl-desc-strong{
+      margin:0 0 16px;
+      color:#000;
+      font-size:24px;
+      line-height:1.45;
+      font-weight:950;
+      letter-spacing:-.06em;
+    }
+
+    #glory-result-lawyer .grl-desc{
+      margin:0;
+      color:#333;
+      font-size:20px;
+      line-height:1.75;
+      font-weight:500;
+      letter-spacing:-.05em;
+    }
+
+    #glory-result-lawyer .grl-bottom{
+      position:relative;
+      min-height:560px;
+      background:
+        radial-gradient(circle at 25% 48%,rgba(36,58,100,.5),transparent 39%),
+        linear-gradient(135deg,#071327 0%,#101f41 48%,#071124 100%);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:0 0 0 16px;
+      animation:grlFadeUp .9s ease .15s both;
+    }
+
+    #glory-result-lawyer .grl-bottom:before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.02),transparent 40%),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 88px);
+      pointer-events:none;
+    }
+
+    #glory-result-lawyer .grl-lawyer-wrap{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:560px;
+      animation:grlFadeLeft 1s ease .25s both;
+    }
+
+    #glory-result-lawyer .grl-lawyer-wrap:before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:360px;
+      height:460px;
+      background:radial-gradient(circle,rgba(255,255,255,.18),transparent 66%);
+      pointer-events:none;
+    }
+
+    #glory-result-lawyer .grl-lawyer{
+      position:relative;
+      z-index:2;
+      width:min(360px,100%);
+      max-width:none;
+      display:block;
+      vertical-align:middle;
+      margin:auto;
+      filter:drop-shadow(0 20px 24px rgba(0,0,0,.34));
+    }
+
+    #glory-result-lawyer .grl-right{
+      position:relative;
+      z-index:3;
+      align-self:center;
+      display:flex;
+      flex-direction:column;
+      padding:52px 0 52px 20px;
+      animation:grlFadeRight 1s ease .3s both;
+    }
+
+    #glory-result-lawyer .grl-list{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    #glory-result-lawyer .grl-item{
+      width:100%;
+      min-height:66px;
+      display:flex;
+      align-items:center;
+      padding:0 24px;
+      background:linear-gradient(90deg,#ffffff 0%,#ffffff 68%,rgba(255,255,255,.55) 100%);
+      color:#111;
+      font-size:23px;
+      line-height:1.25;
+      font-weight:800;
+      letter-spacing:-.065em;
+      box-shadow:0 12px 28px rgba(0,0,0,.16);
+      transition:background .45s ease,color .45s ease,transform .45s ease,box-shadow .45s ease;
+    }
+
+    #glory-result-lawyer .grl-item span{
+      display:block;
+      white-space:normal;
+      position:relative;
+      z-index:2;
+    }
+
+    #glory-result-lawyer .grl-item.grl-active{
+      background:linear-gradient(90deg,#d5aa4d 0%,#f2d88b 68%,rgba(242,216,139,.55) 100%);
+      color:#071832;
+      font-weight:950;
+      transform:translateX(-8px);
+      box-shadow:0 16px 34px rgba(0,0,0,.2);
+    }
+
+    #glory-result-lawyer .grl-final-line{
+      width:100%;
+      padding:28px 22px;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,255,255,.08),transparent 48%),
+        linear-gradient(135deg,#071327 0%,#101f41 50%,#071124 100%);
+      color:#fff;
+      text-align:center;
+      font-size:25px;
+      line-height:1.55;
+      font-weight:900;
+      letter-spacing:-.06em;
+      border-top:1px solid rgba(255,255,255,.12);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+      animation:grlFadeUp .8s ease both;
+    }
+
+    @keyframes grlFadeUp{
+      from{opacity:0;transform:translateY(28px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    @keyframes grlFadeLeft{
+      from{opacity:0;transform:translateX(-34px);}
+      to{opacity:1;transform:translateX(0);}
+    }
+
+    @keyframes grlFadeRight{
+      from{opacity:0;transform:translateX(34px);}
+      to{opacity:1;transform:translateX(0);}
+    }
+
+    @media(max-width:720px){
+      #glory-result-lawyer .grl-top{
+        padding:46px 22px 40px;
+      }
+
+      #glory-result-lawyer .grl-script{
+        font-size:31px;
+        margin-bottom:22px;
+      }
+
+      #glory-result-lawyer .grl-title{
+        font-size:41px;
+      }
+
+      #glory-result-lawyer .grl-desc-box{
+        margin-top:38px;
+        padding:0 34px;
+      }
+
+      #glory-result-lawyer .grl-desc-box:before,
+      #glory-result-lawyer .grl-desc-box:after{
+        font-size:92px;
+      }
+
+      #glory-result-lawyer .grl-desc-strong{
+        font-size:20px;
+      }
+
+      #glory-result-lawyer .grl-desc{
+        font-size:16px;
+      }
+
+      #glory-result-lawyer .grl-bottom{
+        grid-template-columns:1fr 1fr;
+        min-height:450px;
+        padding:0 0 0 8px;
+      }
+
+      #glory-result-lawyer .grl-lawyer-wrap{
+        min-height:450px;
+      }
+
+      #glory-result-lawyer .grl-lawyer-wrap:before{
+        width:250px;
+        height:340px;
+      }
+
+      #glory-result-lawyer .grl-lawyer{
+        width:min(270px,58vw);
+      }
+
+      #glory-result-lawyer .grl-right{
+        padding:34px 0 34px 8px;
+      }
+
+      #glory-result-lawyer .grl-list{
+        gap:10px;
+      }
+
+      #glory-result-lawyer .grl-item{
+        min-height:54px;
+        padding:0 14px;
+        font-size:17px;
+        line-height:1.28;
+      }
+
+      #glory-result-lawyer .grl-item.grl-active{
+        transform:translateX(-4px);
+      }
+
+      #glory-result-lawyer .grl-final-line{
+        padding:21px 14px;
+        font-size:18px;
+        line-height:1.5;
+      }
+    }
+
+    @media(max-width:630px){
+      #glory-result-lawyer .grl-bottom{
+        grid-template-columns:1fr;
+        min-height:auto;
+        padding:0;
+      }
+
+      #glory-result-lawyer .grl-lawyer-wrap{
+        order:1;
+        min-height:auto;
+        padding:42px 20px 12px;
+        justify-content:center;
+        align-items:center;
+      }
+
+      #glory-result-lawyer .grl-lawyer-wrap:before{
+        width:280px;
+        height:280px;
+      }
+
+      #glory-result-lawyer .grl-lawyer{
+        width:min(320px,82vw);
+        margin:0 auto;
+      }
+
+      #glory-result-lawyer .grl-right{
+        order:2;
+        width:100%;
+        padding:20px 16px 40px;
+      }
+
+      #glory-result-lawyer .grl-list{
+        width:100%;
+        gap:10px;
+      }
+
+      #glory-result-lawyer .grl-item{
+        width:100%;
+        min-height:58px;
+        padding:14px 18px;
+        font-size:17px;
+      }
+
+      #glory-result-lawyer .grl-item.grl-active{
+        transform:none;
+      }
+
+      #glory-result-lawyer .grl-final-line{
+        padding:20px 16px;
+        font-size:16px;
+        line-height:1.6;
+      }
+    }
+
+    @media(max-width:420px){
+      #glory-result-lawyer .grl-title{
+        font-size:35px;
+      }
+
+      #glory-result-lawyer .grl-script{
+        font-size:25px;
+      }
+
+      #glory-result-lawyer .grl-desc-strong{
+        font-size:18px;
+      }
+
+      #glory-result-lawyer .grl-desc{
+        font-size:15px;
+      }
+
+      #glory-result-lawyer .grl-lawyer{
+        width:min(285px,82vw);
+      }
+
+      #glory-result-lawyer .grl-right{
+        padding:18px 14px 34px;
+      }
+
+      #glory-result-lawyer .grl-list{
+        gap:8px;
+      }
+
+      #glory-result-lawyer .grl-item{
+        min-height:52px;
+        padding:13px 14px;
+        font-size:15px;
+        letter-spacing:-.06em;
+      }
+
+      #glory-result-lawyer .grl-final-line{
+        padding:18px 12px;
+        font-size:14px;
+        line-height:1.5;
+      }
+    }
+  </style>
+
+  <div class="grl-top">
+    <div class="grl-script">
+      220만원부터!<br>
+      전국 최저 수준 수임료!
+    </div>
+
+    <h2 class="grl-title">
+      최대 6개월 분납<br>
+      모든 서류 일괄대행
+    </h2>
+
+    <div class="grl-desc-box">
+      <p class="grl-desc-strong">
+        대한민국 1% 회생파산 법률서비스
+      </p>
+      <p class="grl-desc">
+        알아듣기도 어려운 복잡한 설명에 힘드셨죠?<br>
+        고객의 편에서 친절한 상담을 약속드립니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="grl-bottom">
+    <div class="grl-lawyer-wrap">
+      <img class="grl-lawyer" src="./img/lawyer.png" alt="이아무 변호사">
+    </div>
+
+    <div class="grl-right">
+      <div class="grl-list">
+        <div class="grl-item grl-active"><span>모든 상담 철저한 비밀 보장</span></div>
+        <div class="grl-item"><span>방문 상담 환영</span></div>
+        <div class="grl-item"><span>기각 시 100% 환불</span></div>
+        <div class="grl-item"><span>수임 즉시 독촉 중단</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grl-final-line">
+    모든 사건이 첫 사건인 것처럼<br>최선을 다해 평온한 일상을 돌려드립니다.
+  </div>
+
+  <script>
+    (function(){
+      const section = document.querySelector('#glory-result-lawyer');
+      if(!section) return;
+
+      const items = Array.from(section.querySelectorAll('.grl-item'));
+      if(!items.length) return;
+
+      let currentIndex = 0;
+
+      function activateItem(index){
+        items.forEach(function(item, i){
+          item.classList.toggle('grl-active', i === index);
+        });
+      }
+
+      activateItem(currentIndex);
+
+      setInterval(function(){
+        currentIndex = (currentIndex + 1) % items.length;
+        activateItem(currentIndex);
+      }, 1800);
+    })();
+  </script>
+</section>
+
+<section id="glory-review-rolling">
+  <style>
+    #glory-review-rolling{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;
+      overflow:hidden;
+      background:#fff;
+      color:#071832;
+      border:1px solid rgba(7,24,50,.1);
+      box-shadow:0 20px 50px rgba(7,24,50,.08);
+      box-sizing:border-box;
+    }
+
+    #glory-review-rolling *{
+      box-sizing:border-box;
+    }
+
+    #glory-review-rolling .grv-wrap{
+      position:relative;
+      padding:36px 0 42px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,249,251,.97),rgba(255,255,255,.98)),
+        radial-gradient(circle at 50% 25%,rgba(214,222,232,.65),transparent 46%);
+      overflow:hidden;
+    }
+
+    #glory-review-rolling .grv-wrap:before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        repeating-linear-gradient(90deg,rgba(7,24,50,.03) 0 1px,transparent 1px 86px),
+        repeating-linear-gradient(180deg,rgba(7,24,50,.025) 0 1px,transparent 1px 78px);
+      opacity:.7;
+      pointer-events:none;
+    }
+
+    #glory-review-rolling .grv-head{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      padding:0 22px;
+      margin-bottom:26px;
+      animation:grvFadeDown .8s ease both;
+    }
+
+    #glory-review-rolling .grv-title{
+      margin:0;
+      font-size:clamp(31px,7vw,52px);
+      line-height:1.16;
+      font-weight:950;
+      letter-spacing:-.075em;
+      color:#071832;
+    }
+
+    #glory-review-rolling .grv-title span{
+      color:#c59635;
+    }
+
+    #glory-review-rolling .grv-slider{
+      position:relative;
+      z-index:2;
+      overflow:hidden;
+      cursor:grab;
+      user-select:none;
+      touch-action:pan-y;
+      padding:8px 0 10px;
+    }
+
+    #glory-review-rolling .grv-slider:active{
+      cursor:grabbing;
+    }
+
+    #glory-review-rolling .grv-track{
+      display:flex;
+      gap:18px;
+      padding:0 22px;
+      transform:translate3d(0,0,0);
+      transition:transform .45s cubic-bezier(.22,.61,.36,1);
+      will-change:transform;
+    }
+
+    #glory-review-rolling .grv-card{
+      flex:0 0 78%;
+      max-width:560px;
+      padding:14px;
+      border-radius:24px;
+      background:rgba(255,255,255,.96);
+      border:1px solid rgba(7,24,50,.1);
+      box-shadow:0 18px 38px rgba(7,24,50,.09);
+      position:relative;
+      overflow:hidden;
+    }
+
+    #glory-review-rolling .grv-card:before{
+      content:'';
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:6px;
+      background:linear-gradient(180deg,#d6af55,#f0d189);
+      z-index:2;
+    }
+
+    #glory-review-rolling .grv-img-wrap{
+      position:relative;
+      width:100%;
+      border-radius:18px;
+      overflow:hidden;
+      background:#f3f5f7;
+      box-shadow:inset 0 0 0 1px rgba(7,24,50,.06);
+    }
+
+    #glory-review-rolling .grv-img{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      pointer-events:none;
+      -webkit-user-drag:none;
+      user-select:none;
+    }
+
+    #glory-review-rolling .grv-caption{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:14px;
+      padding:0 4px;
+      color:#6b7280;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:-.04em;
+    }
+
+    #glory-review-rolling .grv-place{
+      color:#071832;
+      font-weight:900;
+    }
+
+    #glory-review-rolling .grv-nav{
+      position:relative;
+      z-index:3;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      margin-top:24px;
+      padding:0 22px;
+    }
+
+    #glory-review-rolling .grv-btn{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      border:1px solid rgba(7,24,50,.12);
+      background:#fff;
+      color:#071832;
+      font-size:26px;
+      font-weight:300;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(7,24,50,.08);
+      transition:.25s ease;
+    }
+
+    #glory-review-rolling .grv-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 30px rgba(7,24,50,.13);
+    }
+
+    #glory-review-rolling .grv-dots{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    #glory-review-rolling .grv-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:rgba(7,24,50,.22);
+      transition:.25s ease;
+    }
+
+    #glory-review-rolling .grv-dot.is-active{
+      width:24px;
+      border-radius:999px;
+      background:#c59635;
+    }
+
+    #glory-review-rolling .grv-cta-wrap{
+      position:relative;
+      z-index:2;
+      margin-top:24px;
+      padding:0 22px;
+      text-align:center;
+      animation:grvFadeUp .9s ease .25s both;
+    }
+
+    #glory-review-rolling .grv-cta{
+      width:100%;
+      max-width:560px;
+      min-height:66px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:18px 22px;
+      border-radius:18px;
+      text-decoration:none;
+      background:linear-gradient(135deg,#061731,#0b2348);
+      color:#fff;
+      font-size:clamp(19px,4vw,26px);
+      font-weight:950;
+      letter-spacing:-.055em;
+      box-shadow:0 18px 38px rgba(5,18,40,.23), inset 0 -3px 0 #d0a858;
+    }
+
+    #glory-review-rolling .grv-cta span{
+      color:#d8ad55;
+    }
+
+    @keyframes grvFadeUp{
+      from{opacity:0;transform:translateY(28px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    @keyframes grvFadeDown{
+      from{opacity:0;transform:translateY(-18px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    @media(max-width:560px){
+      #glory-review-rolling .grv-wrap{
+        padding:30px 0 34px;
+      }
+
+      #glory-review-rolling .grv-track{
+        gap:14px;
+        padding:0 16px;
+      }
+
+      #glory-review-rolling .grv-card{
+        flex-basis:88%;
+        padding:11px;
+        border-radius:22px;
+      }
+
+      #glory-review-rolling .grv-img-wrap{
+        border-radius:16px;
+      }
+
+      #glory-review-rolling .grv-caption{
+        flex-direction:column;
+        align-items:flex-start;
+        font-size:12px;
+      }
+    }
+  </style>
+
+  <div class="grv-wrap">
+    <div class="grv-head">
+      <h2 class="grv-title">네이버 영수증 후기<br></h2>
+      <p>많은 고객들이 글로리를 통하여 새 삶을 찾았고<br>그 과정에서 편안함을 느꼈습니다.</p>
+    </div>
+
+    <div class="grv-slider" id="grvSlider">
+      <div class="grv-track" id="grvTrack">
+
+        <article class="grv-card">
+          <div class="grv-img-wrap">
+            <img class="grv-img" src="./img/h1.png" alt="네이버 영수증 후기 1">
+          </div>
+          <div class="grv-caption">
+            <span class="grv-place">대전사무소 플레이스</span>
+            <span>네이버 영수증 후기</span>
+          </div>
+        </article>
+
+        <article class="grv-card">
+          <div class="grv-img-wrap">
+            <img class="grv-img" src="./img/h2.png" alt="네이버 영수증 후기 2">
+          </div>
+          <div class="grv-caption">
+            <span class="grv-place">대전사무소 플레이스</span>
+            <span>네이버 영수증 후기</span>
+          </div>
+        </article>
+
+        <article class="grv-card">
+          <div class="grv-img-wrap">
+            <img class="grv-img" src="./img/h3.png" alt="네이버 영수증 후기 3">
+          </div>
+          <div class="grv-caption">
+            <span class="grv-place">대전사무소 플레이스</span>
+            <span>네이버 영수증 후기</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="grv-nav">
+      <button class="grv-btn" type="button" id="grvPrev">‹</button>
+      <div class="grv-dots" id="grvDots">
+        <span class="grv-dot is-active"></span>
+        <span class="grv-dot"></span>
+        <span class="grv-dot"></span>
+      </div>
+      <button class="grv-btn" type="button" id="grvNext">›</button>
+    </div>
+
+  
+  </div>
+
+  <script>
+    (function(){
+      const section = document.querySelector('#glory-review-rolling');
+      if(!section) return;
+
+      const slider = section.querySelector('#grvSlider');
+      const track = section.querySelector('#grvTrack');
+      const cards = Array.from(section.querySelectorAll('.grv-card'));
+      const prev = section.querySelector('#grvPrev');
+      const next = section.querySelector('#grvNext');
+      const dots = Array.from(section.querySelectorAll('.grv-dot'));
+
+      let index = 0;
+      let startX = 0;
+      let currentX = 0;
+      let prevTranslate = 0;
+      let currentTranslate = 0;
+      let isDragging = false;
+
+      function getStep(){
+        if(!cards[0]) return 0;
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return cardWidth + gap;
+      }
+
+      function maxIndex(){
+        return cards.length - 1;
+      }
+
+      function setActiveDot(){
+        dots.forEach((dot, i)=>{
+          dot.classList.toggle('is-active', i === index);
+        });
+      }
+
+      function moveTo(i, animate){
+        index = Math.max(0, Math.min(i, maxIndex()));
+        currentTranslate = -getStep() * index;
+        prevTranslate = currentTranslate;
+        track.style.transition = animate ? 'transform .45s cubic-bezier(.22,.61,.36,1)' : 'none';
+        track.style.transform = 'translate3d(' + currentTranslate + 'px,0,0)';
+        setActiveDot();
+      }
+
+      function pointerDown(e){
+        isDragging = true;
+        startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        track.style.transition = 'none';
+      }
+
+      function pointerMove(e){
+        if(!isDragging) return;
+        currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        const diff = currentX - startX;
+        currentTranslate = prevTranslate + diff;
+        track.style.transform = 'translate3d(' + currentTranslate + 'px,0,0)';
+      }
+
+      function pointerUp(){
+        if(!isDragging) return;
+        isDragging = false;
+
+        const movedBy = currentTranslate - prevTranslate;
+
+        if(movedBy < -50) index += 1;
+        if(movedBy > 50) index -= 1;
+
+        moveTo(index, true);
+      }
+
+      prev.addEventListener('click', function(){
+        moveTo(index - 1, true);
+      });
+
+      next.addEventListener('click', function(){
+        moveTo(index + 1, true);
+      });
+
+      dots.forEach((dot, i)=>{
+        dot.addEventListener('click', function(){
+          moveTo(i, true);
+        });
+      });
+
+      slider.addEventListener('mousedown', pointerDown);
+      slider.addEventListener('mousemove', pointerMove);
+      slider.addEventListener('mouseup', pointerUp);
+      slider.addEventListener('mouseleave', pointerUp);
+
+      slider.addEventListener('touchstart', pointerDown, {passive:true});
+      slider.addEventListener('touchmove', pointerMove, {passive:true});
+      slider.addEventListener('touchend', pointerUp);
+
+      window.addEventListener('resize', function(){
+        moveTo(index, false);
+      });
+
+      moveTo(0, false);
+    })();
+  </script>
+</section>
+
+<section id="glory-call-banner">
+  <style>
+    #glory-call-banner{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      padding:34px 20px;
+      font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;
+      background:#ffffff;
+      box-sizing:border-box;
+    }
+
+    #glory-call-banner *{
+      box-sizing:border-box;
+    }
+
+    #glory-call-banner .gcb-box{
+      position:relative;
+      overflow:hidden;
+      padding:42px 26px 46px;
+      text-align:center;
+      border-radius:26px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,249,251,.96)),
+        radial-gradient(circle at 50% 0%,rgba(214,175,85,.18),transparent 42%);
+      border:1px solid rgba(7,24,50,.12);
+      box-shadow:0 24px 56px rgba(7,24,50,.12);
+      animation:gcbFadeUp .85s ease both;
+    }
+
+    #glory-call-banner .gcb-box:before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.92),rgba(255,255,255,.28),rgba(255,255,255,.94)),
+        repeating-linear-gradient(90deg,rgba(7,24,50,.035) 0 1px,transparent 1px 86px),
+        repeating-linear-gradient(180deg,rgba(7,24,50,.025) 0 1px,transparent 1px 78px);
+      opacity:.72;
+      pointer-events:none;
+    }
+
+    #glory-call-banner .gcb-box:after{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:0;
+      width:82%;
+      height:5px;
+      transform:translateX(-50%);
+      border-radius:0 0 999px 999px;
+      /* background:linear-gradient(90deg,transparent,#071832 18%,#071832 82%,transparent); */
+    }
+
+    #glory-call-banner .gcb-label{
+      position:relative;
+      z-index:2;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+      padding:8px 16px 9px;
+      border-radius:999px;
+      background:linear-gradient(180deg,#ffffff,#eef2f6);
+      border:1px solid rgba(7,24,50,.12);
+      color:#071832;
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:-.045em;
+    }
+
+    #glory-call-banner .gcb-title{
+      position:relative;
+      z-index:2;
+      margin:0 0 9px;
+      color:#071832;
+      font-size:clamp(34px,7vw,58px);
+      line-height:1.13;
+      font-weight:950;
+      letter-spacing:-.075em;
+    }
+
+    #glory-call-banner .gcb-title span{
+      color:#c59635;
+    }
+
+    #glory-call-banner .gcb-sub{
+      position:relative;
+      z-index:2;
+      margin:0 0 30px;
+      color:#2f3847;
+      font-size:clamp(20px,4.4vw,34px);
+      line-height:1.35;
+      font-weight:850;
+      letter-spacing:-.065em;
+    }
+
+    #glory-call-banner .gcb-call{
+      position:relative;
+      z-index:2;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      width:auto;
+      max-width:100%;
+      padding:16px 30px 17px 20px;
+      border-radius:999px;
+      text-decoration:none;
+      background:
+        radial-gradient(circle at 18% 0%,rgba(255,255,255,.14),transparent 36%),
+        linear-gradient(135deg,#061731,#0b2348);
+      color:#ffffff;
+      box-shadow:0 18px 42px rgba(5,18,40,.26);
+      transition:transform .28s ease, box-shadow .28s ease;
+    }
+
+    #glory-call-banner .gcb-call:hover{
+      transform:translateY(-4px);
+      box-shadow:0 26px 54px rgba(5,18,40,.34);
+    }
+
+    #glory-call-banner .gcb-icon{
+      position:relative;
+      width:68px;
+      height:68px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#f3d897 0%,#d8ad55 48%,#c59635 100%);
+      color:#061731;
+      box-shadow:
+        0 8px 22px rgba(213,172,85,.34),
+        inset 0 1px 0 rgba(255,255,255,.5);
+      animation:gcbPhonePulse 4.8s infinite;
+      flex-shrink:0;
+    }
+
+    #glory-call-banner .gcb-icon:after{
+      content:'';
+      position:absolute;
+      inset:-8px;
+      border-radius:50%;
+      border:1px solid rgba(216,173,85,.28);
+      opacity:.85;
+    }
+
+    #glory-call-banner .gcb-icon svg{
+      position:relative;
+      z-index:2;
+      width:34px;
+      height:34px;
+      display:block;
+    }
+
+    #glory-call-banner .gcb-number-wrap{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:center;
+      text-align:left;
+      min-width:0;
+    }
+
+    #glory-call-banner .gcb-call-label{
+      display:block;
+      margin-bottom:6px;
+      color:rgba(255,255,255,.72);
+      font-size:15px;
+      line-height:1;
+      font-weight:750;
+      letter-spacing:-.04em;
+    }
+
+    #glory-call-banner .gcb-number{
+      display:block;
+      color:#ffffff;
+      font-size:clamp(42px,8vw,68px);
+      line-height:.95;
+      font-weight:950;
+      letter-spacing:-.055em;
+      white-space:nowrap;
+    }
+
+    #glory-call-banner .gcb-number em{
+      font-style:normal;
+      color:#d8ad55;
+    }
+
+    #glory-call-banner .gcb-guide{
+      position:relative;
+      z-index:2;
+      margin:22px auto 0;
+      color:#5a6472;
+      font-size:15px;
+      line-height:1.65;
+      font-weight:600;
+      letter-spacing:-.04em;
+    }
+
+    @keyframes gcbFadeUp{
+      from{
+        opacity:0;
+        transform:translateY(26px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes gcbPhonePulse{
+      0%,88%,100%{
+        transform:rotate(0deg) scale(1);
+      }
+      90%{
+        transform:rotate(-8deg) scale(1.04);
+      }
+      92%{
+        transform:rotate(8deg) scale(1.04);
+      }
+      94%{
+        transform:rotate(-5deg) scale(1.02);
+      }
+      96%{
+        transform:rotate(5deg) scale(1.02);
+      }
+    }
+
+    @media(max-width:520px){
+      #glory-call-banner{
+        padding:26px 14px;
+      }
+
+      #glory-call-banner .gcb-box{
+        padding:36px 16px 38px;
+        border-radius:22px;
+      }
+
+      #glory-call-banner .gcb-label{
+        font-size:13px;
+      }
+
+      #glory-call-banner .gcb-title{
+        font-size:34px;
+      }
+
+      #glory-call-banner .gcb-sub{
+        font-size:23px;
+        margin-bottom:24px;
+      }
+
+      #glory-call-banner .gcb-call{
+        gap:11px;
+        padding:13px 18px 14px 13px;
+      }
+
+      #glory-call-banner .gcb-icon{
+        width:54px;
+        height:54px;
+      }
+
+      #glory-call-banner .gcb-icon svg{
+        width:28px;
+        height:28px;
+      }
+
+      #glory-call-banner .gcb-call-label{
+        font-size:12px;
+        margin-bottom:5px;
+      }
+
+      #glory-call-banner .gcb-number{
+        font-size:38px;
+      }
+
+      #glory-call-banner .gcb-guide{
+        font-size:13px;
+      }
+    }
+
+    @media(max-width:360px){
+      #glory-call-banner .gcb-title{
+        font-size:30px;
+      }
+
+      #glory-call-banner .gcb-sub{
+        font-size:20px;
+      }
+
+      #glory-call-banner .gcb-number{
+        font-size:33px;
+      }
+
+      #glory-call-banner .gcb-icon{
+        width:48px;
+        height:48px;
+      }
+
+      #glory-call-banner .gcb-icon svg{
+        width:25px;
+        height:25px;
+      }
+    }
+  </style>
+
+  <div class="gcb-box">
+
+    <h2 class="gcb-title">
+      <span>24시간</span> 무료전화상담
+    </h2>
+
+    <p class="gcb-sub">
+      빠른 무료상담은 전화번호 클릭
+    </p>
+
+    <a class="gcb-call" href="tel:15440904" aria-label="1544-0904 전화걸기">
+      <span class="gcb-icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22 16.92V20a2 2 0 0 1-2.18 2
+                   19.79 19.79 0 0 1-8.63-3.07
+                   19.5 19.5 0 0 1-6-6
+                   A19.79 19.79 0 0 1 2.08 4.18
+                   2 2 0 0 1 4.06 2h3.09
+                   a2 2 0 0 1 2 1.72
+                   c.12.89.33 1.76.62 2.6
+                   a2 2 0 0 1-.45 2.11L8.09 9.91
+                   a16 16 0 0 0 6 6l1.48-1.23
+                   a2 2 0 0 1 2.11-.45
+                   c.84.29 1.71.5 2.6.62
+                   A2 2 0 0 1 22 16.92Z"
+                fill="currentColor"/>
+        </svg>
+      </span>
+
+      <span class="gcb-number-wrap">
+        <span class="gcb-call-label">전화걸기 클릭</span>
+        <span class="gcb-number"><em>1544</em>-0904</span>
+      </span>
+    </a>
+
+    <p class="gcb-guide">
+      상담 가능 여부를 빠르게 확인하고, 상황에 맞는 방향을 안내드립니다.
+    </p>
+  </div>
+</section>
+
+<section id="premiumConsultForm">
+  <style>
+    #premiumConsultForm {
+      width: 100%;
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      box-sizing: border-box;
+    }
+
+    #premiumConsultForm * {
+      box-sizing: border-box;
+    }
+
+    #premiumConsultForm .pcf-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 54px 56px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(7,24,50,0.12);
+      box-shadow: 0 28px 80px rgba(7,24,50,0.12);
+      animation: pcfFadeInUp .9s ease forwards;
+    }
+
+    #premiumConsultForm .pcf-top {
+      max-width: 820px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    #premiumConsultForm .pcf-form-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    #premiumConsultForm .pcf-label {
+      display: inline-flex;
+      padding: 8px 16px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      background: rgba(216,173,85,0.13);
+      color: #b78627;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    #premiumConsultForm .pcf-title {
+      margin: 0;
+      color: #071832;
+      font-size: 34px;
+      line-height: 1.28;
+      font-weight: 950;
+      letter-spacing: -0.055em;
+    }
+
+    #premiumConsultForm .pcf-desc {
+      margin: 14px 0 0;
+      color: #5a6472;
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    #premiumConsultForm .pcf-field {
+      margin-bottom: 24px;
+    }
+
+    #premiumConsultForm .pcf-field label {
+      display: block;
+      margin-bottom: 10px;
+      color: #1e3036;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    #premiumConsultForm input,
+    #premiumConsultForm select {
+      width: 100%;
+      height: 58px;
+      padding: 0 18px;
+      border-radius: 16px;
+      border: 1px solid #dbe6ea;
+      background: #f8fbfd;
+      color: #172e36;
+      font-size: 17px;
+      font-weight: 600;
+      outline: none;
+      transition: .25s ease;
+    }
+
+    #premiumConsultForm input:focus,
+    #premiumConsultForm select:focus {
+      border-color: #071832;
+      background: #ffffff;
+      box-shadow: 0 0 0 5px rgba(7,24,50,0.1);
+    }
+
+    #premiumConsultForm .pcf-region-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, #496168 50%),
+        linear-gradient(135deg, #496168 50%, transparent 50%);
+      background-position:
+        calc(100% - 22px) 24px,
+        calc(100% - 15px) 24px;
+      background-size: 7px 7px, 7px 7px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    #premiumConsultForm .pcf-phone {
+      display: grid;
+      grid-template-columns: 1fr 18px 1fr 18px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    #premiumConsultForm .pcf-phone input {
+      text-align: center;
+    }
+
+    #premiumConsultForm #pcfPhone1 {
+      background: #eef2f6;
+      color: #071832;
+      font-weight: 900;
+    }
+
+    #premiumConsultForm .pcf-dash {
+      color: #496168;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #premiumConsultForm .pcf-agree-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0 32px;
+      color: #1f3035;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    #premiumConsultForm .pcf-agree-row input {
+      width: 20px;
+      height: 20px;
+      accent-color: #071832;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    #premiumConsultForm .pcf-privacy-open {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #071832;
+      font-size: 16px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      cursor: pointer;
+    }
+
+    #premiumConsultForm .pcf-submit {
+      width: 100%;
+      height: 66px;
+      border: none;
+      border-radius: 22px;
+      background: linear-gradient(135deg,#071832 0%,#0b2348 100%);
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      cursor: pointer;
+      box-shadow: 0 18px 36px rgba(7,24,50,0.25);
+      transition: .25s ease;
+    }
+
+    #premiumConsultForm .pcf-submit:hover:not(:disabled) {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 46px rgba(7,24,50,0.32);
+    }
+
+    #premiumConsultForm .pcf-submit:disabled {
+      background: #c7d3d8;
+      color: #6d7b82;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    #premiumConsultForm .pcf-message {
+      display: none;
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    #premiumConsultForm .pcf-message.success {
+      display: block;
+      background: rgba(7,24,50,0.08);
+      color: #071832;
+    }
+
+    #premiumConsultForm .pcf-message.error {
+      display: block;
+      background: rgba(220,38,38,0.08);
+      color: #c02626;
+    }
+
+    #premiumConsultForm .pcf-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2147483647;
+      padding: 20px;
+      background: rgba(10,25,31,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: .35s ease;
+    }
+
+    #premiumConsultForm .pcf-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      background: rgba(10,25,31,0.62);
+    }
+
+    #premiumConsultForm .pcf-modal-box {
+      width: 100%;
+      max-width: 560px;
+      max-height: 78vh;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.28);
+      opacity: 0;
+      transform: translateY(24px) scale(.96);
+      transition: .38s ease;
+    }
+
+    #premiumConsultForm .pcf-modal.is-open .pcf-modal-box {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    #premiumConsultForm .pcf-modal-head {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 28px 34px 20px;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e6f0f3;
+      backdrop-filter: blur(14px);
+    }
+
+    #premiumConsultForm .pcf-modal-box h3 {
+      margin: 0;
+      color: #071832;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    #premiumConsultForm .pcf-modal-x {
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 50%;
+      background: #eef5f7;
+      color: #17323b;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    #premiumConsultForm .pcf-modal-content {
+      max-height: calc(78vh - 92px);
+      overflow-y: auto;
+      padding: 24px 34px 0;
+      scrollbar-width: none;
+    }
+
+    #premiumConsultForm .pcf-modal-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    #premiumConsultForm .pcf-privacy-box {
+      padding: 22px;
+      border-radius: 18px;
+      background: #f7fbfc;
+      border: 1px solid #e1edf0;
+    }
+
+    #premiumConsultForm .pcf-privacy-box p {
+      margin: 0 0 14px;
+      color: #53676d;
+      font-size: 15px;
+      line-height: 1.75;
+      letter-spacing: -0.035em;
+    }
+
+    #premiumConsultForm .pcf-modal-close-wrap {
+      position: sticky;
+      bottom: 0;
+      z-index: 5;
+      padding: 18px 34px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,.72), #fff);
+      backdrop-filter: blur(14px);
+    }
+
+    #premiumConsultForm .pcf-modal-close {
+      width: 100%;
+      height: 54px;
+      border: none;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #071832 0%, #0b2348 100%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    @keyframes pcfFadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      #premiumConsultForm {
+        padding: 46px 16px;
+      }
+
+      #premiumConsultForm .pcf-wrap {
+        padding: 38px 22px;
+        border-radius: 24px;
+      }
+
+      #premiumConsultForm .pcf-title {
+        font-size: 27px;
+      }
+
+      #premiumConsultForm .pcf-phone {
+        grid-template-columns: .9fr 10px 1fr 10px 1fr;
+        gap: 7px;
+      }
+
+      #premiumConsultForm input,
+      #premiumConsultForm select {
+        height: 54px;
+        font-size: 16px;
+        padding: 0 12px;
+      }
+
+      #premiumConsultForm .pcf-agree-row {
+        flex-wrap: wrap;
+        font-size: 15px;
+      }
+    }
+  </style>
+
+  <div class="pcf-wrap">
+    <div class="pcf-top">
+      <div class="pcf-label">법무법인 글로리</div>
+      <h2 class="pcf-title">무료 상담을 통해<br>빚의 무게를 내려놓으세요.</h2>
+      <p class="pcf-desc">성함과 지역, 연락처만 남겨주시면<br>담당자가 순차적으로 연락드립니다.</p>
+    </div>
+
+    <form id="pcfForm" class="pcf-form-inner" novalidate>
+      <div class="pcf-field">
+        <label for="pcfName">성함</label>
+        <input type="text" id="pcfName" name="name" autocomplete="name" required>
+      </div>
+
+      <div class="pcf-field">
+        <label for="pcfRegion">지역</label>
+        <select id="pcfRegion" name="region" class="pcf-region-select" required>
+          <option value="">지역을 선택해주세요</option>
+          <option value="서울・경기">서울・경기</option>
+          <option value="대전・충청">대전・충청</option>
+          <option value="광주・전라">광주・전라</option>
+          <option value="부산・경상">부산・경상</option>
+          <option value="강원도">강원도</option>
+        </select>
+      </div>
+
+      <div class="pcf-field">
+        <label>연락처</label>
+        <div class="pcf-phone">
+          <input type="tel" id="pcfPhone1" name="phone_first" value="010" maxlength="3" inputmode="numeric" readonly required>
+          <span class="pcf-dash">-</span>
+          <input type="tel" id="pcfPhone2" name="phone_middle" maxlength="4" inputmode="numeric"  required>
+          <span class="pcf-dash">-</span>
+          <input type="tel" id="pcfPhone3" name="phone_last" maxlength="4" inputmode="numeric"  required>
+        </div>
+      </div>
+
+      <div class="pcf-agree-row">
+        <input type="checkbox" id="pcfAgree" name="privacy_agreed" required checked>
+        <label for="pcfAgree">개인정보 수집·이용 동의</label>
+        <button type="button" class="pcf-privacy-open" id="pcfPrivacyBtn">[보기]</button>
+      </div>
+
+      <button type="submit" class="pcf-submit" id="pcfSubmitBtn" disabled>성함을 입력해주세요</button>
+      <div class="pcf-message" id="pcfMessage"></div>
+    </form>
+  </div>
+
+  <div class="pcf-modal" id="pcfModal" aria-hidden="true">
+    <div class="pcf-modal-box" role="dialog" aria-modal="true" aria-labelledby="pcfPrivacyTitle">
+      <div class="pcf-modal-head">
+        <h3 id="pcfPrivacyTitle">개인정보 수집·이용 동의</h3>
+        <button type="button" class="pcf-modal-x" id="pcfModalX" aria-label="닫기">×</button>
+      </div>
+
+      <div class="pcf-modal-content">
+        <div class="pcf-privacy-box">
+          <p><strong>1. 수집 항목</strong><br>성함, 지역, 연락처</p>
+          <p><strong>2. 수집 목적</strong><br>상담 신청 확인, 상담 안내 연락, 신청자 응대</p>
+          <p><strong>3. 보유 및 이용 기간</strong><br>상담 목적 달성 후 즉시 파기하며, 관련 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관됩니다.</p>
+          <p><strong>4. 동의 거부 권리</strong><br>개인정보 수집·이용 동의를 거부하실 수 있으나, 동의하지 않을 경우 상담 신청이 제한될 수 있습니다.</p>
+          <p><strong>5. 개인정보 처리 안내</strong><br>입력하신 개인정보는 상담 안내를 위한 목적으로만 사용되며, 제3자에게 제공되지 않습니다.</p>
+        </div>
+      </div>
+
+      <div class="pcf-modal-close-wrap">
+        <button type="button" class="pcf-modal-close" id="pcfModalClose">동의하고 계속하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+     (function () {
+    const SUPABASE_URL = "https://tknyhvycsxvlxrdscmue.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRrbnlodnljc3h2bHhyZHNjbXVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2NDQ2NjQsImV4cCI6MjA5NDIyMDY2NH0.WaeR94STn1lpm-hJQeCiJITE3Pvmien84EU9tIyVLDg";
+    const TABLE_NAME = "consult_applications";
+
+    const form = document.getElementById("pcfForm");
+    const nameInput = document.getElementById("pcfName");
+    const regionInput = document.getElementById("pcfRegion");
+    const phone1Input = document.getElementById("pcfPhone1");
+    const phone2Input = document.getElementById("pcfPhone2");
+    const phone3Input = document.getElementById("pcfPhone3");
+    const agreeInput = document.getElementById("pcfAgree");
+    const submitBtn = document.getElementById("pcfSubmitBtn");
+    const messageBox = document.getElementById("pcfMessage");
+    const modal = document.getElementById("pcfModal");
+    const privacyBtn = document.getElementById("pcfPrivacyBtn");
+    const modalClose = document.getElementById("pcfModalClose");
+    const modalX = document.getElementById("pcfModalX");
+
+    let isSubmitting = false;
+    let supabaseClient = null;
+
+    function getClient() {
+      if (!supabaseClient) {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      }
+      return supabaseClient;
+    }
+
+    function showMessage(type, text) {
+      messageBox.className = "pcf-message " + type;
+      messageBox.textContent = text;
+    }
+
+    function clearMessage() {
+      messageBox.className = "pcf-message";
+      messageBox.textContent = "";
+    }
+
+    function onlyNumber(value) {
+      return value.replace(/[^0-9]/g, "");
+    }
+
+    function updateSubmitState() {
+      const name = nameInput.value.trim();
+      const region = regionInput.value.trim();
+      const phone2 = phone2Input.value.trim();
+      const phone3 = phone3Input.value.trim();
+      const agreed = agreeInput.checked;
+
+      submitBtn.disabled = true;
+
+      if (!name) {
+        submitBtn.textContent = "성함을 입력해주세요";
+        return;
+      }
+
+      if (!region) {
+        submitBtn.textContent = "지역을 선택해주세요";
+        return;
+      }
+
+      if (phone2.length !== 4 || phone3.length !== 4) {
+        submitBtn.textContent = "전화번호를 입력해주세요";
+        return;
+      }
+
+      if (!agreed) {
+        submitBtn.textContent = "개인정보 동의가 필요합니다";
+        return;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "무료상담신청";
+    }
+
+    function openPrivacyModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closePrivacyModal(checkAgree) {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+
+      if (checkAgree) {
+        agreeInput.checked = true;
+        updateSubmitState();
+      }
+    }
+
+    function getClientId() {
+      const key = "pcf_client_id";
+      let clientId = "";
+
+      try {
+        clientId = localStorage.getItem(key);
+
+        if (!clientId) {
+          clientId = "pcf_" + Date.now() + "_" + Math.random().toString(36).slice(2);
+          localStorage.setItem(key, clientId);
+        }
+      } catch (e) {
+        clientId = "pcf_" + Date.now() + "_" + Math.random().toString(36).slice(2);
+      }
+
+      return clientId;
+    }
+
+    nameInput.addEventListener("input", updateSubmitState);
+    regionInput.addEventListener("change", updateSubmitState);
+    agreeInput.addEventListener("change", updateSubmitState);
+
+    phone2Input.addEventListener("input", function () {
+      this.value = onlyNumber(this.value).slice(0, 4);
+      if (this.value.length === 4) {
+        phone3Input.focus();
+      }
+      updateSubmitState();
+    });
+
+    phone3Input.addEventListener("input", function () {
+      this.value = onlyNumber(this.value).slice(0, 4);
+      updateSubmitState();
+    });
+
+    privacyBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      openPrivacyModal();
+    });
+
+    modalClose.addEventListener("click", function () {
+      closePrivacyModal(true);
+    });
+
+    modalX.addEventListener("click", function () {
+      closePrivacyModal(false);
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        closePrivacyModal(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        closePrivacyModal(false);
+      }
+    });
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (isSubmitting || submitBtn.disabled) return;
+
+      clearMessage();
+
+      const name = nameInput.value.trim();
+      const region = regionInput.value.trim();
+      const phone1 = "010";
+      const phone2 = phone2Input.value.trim();
+      const phone3 = phone3Input.value.trim();
+      const phone = phone1 + "-" + phone2 + "-" + phone3;
+
+      // 제출 직전 방어 검증 (DB 정책과 일치)
+      if (!name || !region || phone2.length !== 4 || phone3.length !== 4 || !agreeInput.checked) {
+        updateSubmitState();
+        return;
+      }
+
+      try {
+        isSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "접수 중입니다...";
+
+        if (!SUPABASE_ANON_KEY || SUPABASE_ANON_KEY.indexOf("넣어주세요") !== -1) {
+          throw new Error("SUPABASE_ANON_KEY가 설정되지 않았습니다.");
+        }
+
+        const { error } = await getClient()
+          .from(TABLE_NAME)
+          .insert([
+            {
+              name: name,
+              region: region,
+              phone: phone,
+              phone_first: phone1,
+              phone_middle: phone2,
+              phone_last: phone3,
+              privacy_agreed: true,
+              page_url: window.location.href,
+              referrer: document.referrer || "",
+              user_agent: navigator.userAgent,
+              client_id: getClientId()
+            }
+          ]);
+
+        if (error) throw error;
+
+        showMessage("success", "상담 신청이 정상적으로 접수되었습니다.");
+        form.reset();
+        phone1Input.value = "010";
+        submitBtn.textContent = "접수 완료";
+
+      } catch (error) {
+        console.error(error);
+        showMessage("error", "접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+        isSubmitting = false;
+        updateSubmitState();
+      }
+    });
+
+    updateSubmitState();
+  })();
+  </script>
+</section>
+
