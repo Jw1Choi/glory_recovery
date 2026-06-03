@@ -56,13 +56,23 @@
     ========================= */
 
     #glory-lawyer-banner .glb-header{
+      position:relative;
       display:flex;
       align-items:center;
       justify-content:space-between;
       padding:18px 24px;
-      background:#fff;
-      border-bottom:1px solid rgba(0,0,0,.08);
+      background:linear-gradient(180deg,#ffffff,#f7f9fc);
+      border-bottom:1px solid rgba(7,24,50,.08);
       animation:glbFadeDown .8s ease;
+    }
+
+    /* 헤더 하단 골드 액센트 라인 */
+    #glory-lawyer-banner .glb-header:after{
+      content:'';
+      position:absolute;
+      left:0; right:0; bottom:-1px;
+      height:2px;
+      background:linear-gradient(90deg,transparent,#d8ad55 35%,#f2d88b 50%,#d8ad55 65%,transparent);
     }
 
     #glory-lawyer-banner .glb-logo-link{
@@ -82,7 +92,12 @@
 
     #glory-lawyer-banner .glb-header-badge{
       flex-shrink:0;
-      font-size:22px;
+      position:relative;
+      padding:7px 15px;
+      border-radius:999px;
+      /* background:rgba(7,24,50,.05);
+      border:1px solid rgba(7,24,50,.1); */
+      font-size:16px;
       font-weight:900;
       color:#071832;
       letter-spacing:-0.04em;
@@ -94,13 +109,33 @@
 
     #glory-lawyer-banner .glb-main{
       position:relative;
-      padding:35px 20px 0;
+      padding:42px 20px;
       text-align:center;
       overflow:hidden;
-      background:
-      radial-gradient(circle at center,
-      rgba(212,220,230,.8),
-      transparent 55%);
+      background:#ffffff; /* 이미지가 없을 때의 단색 배경 (장식 없음) */
+    }
+
+    /* 본문 요소들을 배경 이미지 위로 */
+    #glory-lawyer-banner .glb-proof-line,
+    #glory-lawyer-banner .glb-rolling,
+    #glory-lawyer-banner .glb-lawyer,
+    #glory-lawyer-banner .glb-photo-wrap{
+      position:relative;
+      z-index:2;
+    }
+
+    /* ===== 배경 이미지 (이것만 교체하세요) =====
+       아래 HTML의 <img class="glb-bg" src="..."> 의 src 주소만 바꾸면 됩니다. */
+    #glory-lawyer-banner .glb-bg{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      pointer-events:none;
+      opacity: 0.3;
     }
 
     #glory-lawyer-banner .glb-proof-line{
@@ -108,11 +143,11 @@
       max-width:520px;
       height:2px;
       margin:0 auto 22px;
-      background:linear-gradient(
+      /* background:linear-gradient(
       90deg,
       transparent,
       #071832,
-      transparent);
+      transparent); */
     }
 
     #glory-lawyer-banner .glb-proof-small{
@@ -158,9 +193,23 @@
       inset 0 -3px 0 #d8ad55;
     }
 
+    /* 롤링 박스 내부 은은한 골드 글로우 */
+    #glory-lawyer-banner .glb-rolling:before{
+      content:'';
+      position:absolute;
+      z-index:0;
+      top:-40%;
+      right:-10%;
+      width:55%;
+      height:160%;
+      background:radial-gradient(circle, rgba(216,173,85,.22), transparent 65%);
+      pointer-events:none;
+    }
+
     #glory-lawyer-banner .glb-track{
       position:absolute;
       inset:0;
+      z-index:1;
       display:flex;
       width:300%;
       animation:glbRolling 9s infinite;
@@ -190,23 +239,29 @@
     ========================= */
 
     #glory-lawyer-banner .glb-lawyer{
-      margin-top:35px;
+      margin-top:42px;
       animation:glbFadeUp 1s ease;
     }
 
     #glory-lawyer-banner .glb-job{
-      font-size:22px;
-      color:#222;
-      font-weight:500;
+      display:inline-block;
+      padding:7px 16px;
+      border-radius:999px;
+      background:rgba(7,24,50,.05);
+      border:1px solid rgba(7,24,50,.1);
+      font-size:18px;
+      color:#22324d;
+      font-weight:600;
       letter-spacing:-0.04em;
+      line-height:1.5;
     }
 
     #glory-lawyer-banner .glb-name{
-      margin-top:10px;
-      font-size:70px;
+      margin-top:16px;
+      font-size:44px;
       font-weight:900;
       color:#071832;
-      letter-spacing:-0.08em;
+      letter-spacing:-0.06em;
       line-height:1;
     }
 
@@ -215,6 +270,7 @@
       height:4px;
       background:linear-gradient(90deg,#cfa754,#f2d88b);
       margin:22px auto;
+      border-radius:999px;
     }
 
     #glory-lawyer-banner .glb-desc{
@@ -226,35 +282,19 @@
 
     #glory-lawyer-banner .glb-photo-wrap{
       position:relative;
-      min-height:420px;
+      min-height:440px;
       display:flex;
       align-items:flex-end;
       justify-content:center;
-      margin-top:15px;
-    }
-
-    #glory-lawyer-banner .glb-photo-wrap:before{
-      content:'';
-      position:absolute;
-      width:500px;
-      height:450px;
-      left:50%;
-      bottom:0;
-      transform:translateX(-50%);
-      background:
-      radial-gradient(
-      circle,
-      rgba(255,255,255,.95),
-      rgba(214,223,232,.55),
-      transparent 70%);
+      margin-top:20px;
     }
 
     #glory-lawyer-banner .glb-photo{
       position:relative;
-      z-index:2;
+      z-index:3;
       width:min(420px,88vw);
       display:block;
-      filter:drop-shadow(0 15px 20px rgba(0,0,0,.15));
+      filter:drop-shadow(0 18px 24px rgba(7,24,50,.22));
     }
 
     /* =========================
@@ -262,15 +302,32 @@
     ========================= */
 
     #glory-lawyer-banner .glb-bottom{
+      position:relative;
       background:
       linear-gradient(
       135deg,
       #061731,
       #0b2348);
       color:#fff;
+      overflow:hidden;
+    }
+
+    /* 하단 영역 은은한 골드 글로우 */
+    #glory-lawyer-banner .glb-bottom:before{
+      content:'';
+      position:absolute;
+      z-index:0;
+      top:-30%;
+      left:-10%;
+      width:50%;
+      height:160%;
+      background:radial-gradient(circle, rgba(216,173,85,.14), transparent 60%);
+      pointer-events:none;
     }
 
     #glory-lawyer-banner .glb-feature{
+      position:relative;
+      z-index:1;
       display:flex;
       align-items:center;
       gap:18px;
@@ -282,7 +339,8 @@
       width:60px;
       height:60px;
       border-radius:50%;
-      border:1px solid rgba(255,255,255,.3);
+      border:1px solid rgba(216,173,85,.45);
+      background:rgba(216,173,85,.08);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -297,6 +355,8 @@
     }
 
     #glory-lawyer-banner .glb-final{
+      position:relative;
+      z-index:1;
       padding:28px;
       text-align:center;
     }
@@ -358,12 +418,9 @@
         padding:14px 16px;
       }
 
-      #glory-lawyer-banner .glb-logo-img{
-        /* width:150px; */
-      }
-
       #glory-lawyer-banner .glb-header-badge{
-        font-size:16px;
+        font-size:13px;
+        padding:6px 12px;
       }
 
       #glory-lawyer-banner .glb-proof-small{
@@ -378,12 +435,16 @@
         font-size:18px;
       }
 
+      #glory-lawyer-banner .glb-job{
+        font-size:15px;
+      }
+
       #glory-lawyer-banner .glb-name{
-        font-size:48px;
+        font-size:30px;
       }
 
       #glory-lawyer-banner .glb-photo-wrap{
-        min-height:330px;
+        min-height:340px;
       }
 
       #glory-lawyer-banner .glb-feature-text{
@@ -414,6 +475,14 @@
     </header>
 
     <div class="glb-main">
+
+      <!-- ===== 배경 이미지: 아래 src 주소만 원하는 이미지로 바꾸세요 ===== -->
+      <img
+        class="glb-bg"
+        src="./img/page-5.jpg"
+        alt=""
+        aria-hidden="true"
+        onerror="this.style.display='none'">
 
       <div class="glb-proof-line"></div>
 
@@ -3345,6 +3414,91 @@
       cursor: pointer;
     }
 
+    /* ===== 신청 완료 팝업 ===== */
+    #premiumConsultForm .pcf-done-box {
+      width: 100%;
+      max-width: 440px;
+      padding: 44px 34px 34px;
+      border-radius: 26px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.28);
+      opacity: 0;
+      transform: translateY(24px) scale(.96);
+      transition: .38s ease;
+    }
+
+    #premiumConsultForm .pcf-modal.is-open .pcf-done-box {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    #premiumConsultForm .pcf-done-icon {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#071832 0%,#0b2348 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 30px rgba(7,24,50,0.28);
+      animation: pcfPop .45s ease;
+    }
+
+    #premiumConsultForm .pcf-done-icon svg {
+      width: 38px;
+      height: 38px;
+      stroke: #fff;
+      stroke-width: 3.4;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #premiumConsultForm .pcf-done-title {
+      margin: 0;
+      color: #071832;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    #premiumConsultForm .pcf-done-desc {
+      margin: 14px 0 28px;
+      color: #5a6472;
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    #premiumConsultForm .pcf-done-confirm {
+      width: 100%;
+      height: 56px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg,#071832 0%,#0b2348 100%);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(7,24,50,0.25);
+      transition: .25s ease;
+    }
+
+    #premiumConsultForm .pcf-done-confirm:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(7,24,50,0.32);
+    }
+
+    @keyframes pcfPop {
+      0% { transform: scale(0); }
+      60% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+
     @keyframes pcfFadeInUp {
       from { opacity: 0; transform: translateY(28px); }
       to { opacity: 1; transform: translateY(0); }
@@ -3453,6 +3607,18 @@
     </div>
   </div>
 
+  <!-- ===== 신청 완료 팝업 ===== -->
+  <div class="pcf-modal" id="pcfDoneModal" aria-hidden="true">
+    <div class="pcf-done-box" role="dialog" aria-modal="true" aria-labelledby="pcfDoneTitle">
+      <div class="pcf-done-icon">
+        <svg viewBox="0 0 24 24"><polyline points="4 12.5 9.5 18 20 6.5"></polyline></svg>
+      </div>
+      <h3 class="pcf-done-title" id="pcfDoneTitle">신청이 완료되었습니다</h3>
+      <p class="pcf-done-desc">상담 신청이 정상적으로 접수되었습니다.<br>담당자가 순차적으로 연락드리겠습니다.</p>
+      <button type="button" class="pcf-done-confirm" id="pcfDoneConfirm">확인</button>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
@@ -3460,6 +3626,11 @@
     const SUPABASE_URL = "https://tknyhvycsxvlxrdscmue.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRrbnlodnljc3h2bHhyZHNjbXVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2NDQ2NjQsImV4cCI6MjA5NDIyMDY2NH0.WaeR94STn1lpm-hJQeCiJITE3Pvmien84EU9tIyVLDg";
     const TABLE_NAME = "consult_applications";
+
+    // ===== Thank you page 설정 =====
+    // 이동시킬 thank you page 주소를 입력하세요. (예: "https://example.com/thank-you")
+    // 비워두면("") 신청 완료 후 페이지가 새로고침됩니다.
+    const THANK_YOU_URL = "";
 
     const form = document.getElementById("pcfForm");
     const nameInput = document.getElementById("pcfName");
@@ -3475,8 +3646,13 @@
     const modalClose = document.getElementById("pcfModalClose");
     const modalX = document.getElementById("pcfModalX");
 
+    // 완료 팝업 요소
+    const doneModal = document.getElementById("pcfDoneModal");
+    const doneConfirm = document.getElementById("pcfDoneConfirm");
+
     let isSubmitting = false;
     let supabaseClient = null;
+    let isDone = false; // 신청 완료 여부
 
     function getClient() {
       if (!supabaseClient) {
@@ -3500,6 +3676,9 @@
     }
 
     function updateSubmitState() {
+      // 이미 완료된 경우 버튼 상태를 건드리지 않음
+      if (isDone) return;
+
       const name = nameInput.value.trim();
       const region = regionInput.value.trim();
       const phone2 = phone2Input.value.trim();
@@ -3544,6 +3723,22 @@
       if (checkAgree) {
         agreeInput.checked = true;
         updateSubmitState();
+      }
+    }
+
+    // 신청 완료 팝업 열기
+    function openDoneModal() {
+      doneModal.classList.add("is-open");
+      doneModal.setAttribute("aria-hidden", "false");
+    }
+
+    // 확인 클릭 시: thank you page URL이 있으면 이동, 없으면 새로고침
+    function finishConsult() {
+      const url = (THANK_YOU_URL || "").trim();
+      if (url) {
+        window.location.href = url;
+      } else {
+        window.location.reload();
       }
     }
 
@@ -3602,6 +3797,11 @@
       }
     });
 
+    // 완료 팝업의 "확인" 버튼
+    doneConfirm.addEventListener("click", function () {
+      finishConsult();
+    });
+
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && modal.classList.contains("is-open")) {
         closePrivacyModal(false);
@@ -3657,10 +3857,11 @@
 
         if (error) throw error;
 
-        showMessage("success", "상담 신청이 정상적으로 접수되었습니다.");
-        form.reset();
-        phone1Input.value = "010";
+        // 접수 완료 처리: 완료 상태 고정 + 팝업 노출
+        isDone = true;
         submitBtn.textContent = "접수 완료";
+        submitBtn.disabled = true;
+        openDoneModal();
 
       } catch (error) {
         console.error(error);
